@@ -17,7 +17,8 @@
     "require": {
         "ifcastle/application": "^0.5.0",
         "ifcastle/service-manager": "^0.5.0",
-        "ifcastle/amphp-engine": "^0.1.0"
+        "ifcastle/amphp-engine": "^0.1.0",
+        "ifcastle/amphp-pool": "^1.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.60",
