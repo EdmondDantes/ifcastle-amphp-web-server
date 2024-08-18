@@ -3,25 +3,14 @@ declare(strict_types=1);
 
 namespace IfCastle\AmphpWebServer;
 
-use IfCastle\Amphp\AmphpEngine;
+use IfCastle\AmpPool\WorkerPool;
 
-class WebServerEngine               extends AmphpEngine
+class WebServerEngine               extends \IfCastle\Amphp\AmphpEngine
 {
     #[\Override]
-    public function isServer(): bool
+    public function start(): void
     {
-        return true;
-    }
-    
-    #[\Override]
-    public function isProcess(): bool
-    {
-        return false;
-    }
-    
-    #[\Override]
-    public function isConsole(): bool
-    {
-        return false;
+        $workerPool                 = new WorkerPool(logger: $logger);
+        $workerPool->run();
     }
 }

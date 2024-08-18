@@ -4,23 +4,23 @@ declare(strict_types=1);
 namespace IfCastle\AmphpWebServer;
 
 use IfCastle\Application\ApplicationAbstract;
+use IfCastle\Application\Bootloader\BootloaderExecutorInterface;
 use IfCastle\Application\EngineInterface;
-use IfCastle\ServiceManager\DescriptorRepositoryInterface;
+use IfCastle\Application\EngineRolesEnum;
+use IfCastle\DI\ConstructibleDependency;
 
 class WebServerApplication          extends ApplicationAbstract
 {
     #[\Override]
-    protected function engineStartAfter(): void
+    protected static function predefineEngine(BootloaderExecutorInterface $bootloaderExecutor): void
     {
-        (new SymfonyApplication(
-            $this->systemEnvironment,
-            $this->systemEnvironment->resolveDependency(DescriptorRepositoryInterface::class)
-        ))->run();
+        $bootloaderExecutor->getBootloaderContext()->getSystemEnvironmentBootBuilder()
+            ->set(EngineInterface::class, new ConstructibleDependency(WebServerEngine::class));
     }
     
     #[\Override]
-    protected function defineEngine(): EngineInterface|null
+    protected function defineEngineRole(): EngineRolesEnum
     {
-        return new WebServerEngine;
+        return EngineRolesEnum::SERVER;
     }
 }

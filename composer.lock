@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "265985571980cb3ad90eca1974385d6d",
+    "content-hash": "b418e82529f885cd59296b330698bbea",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1220,21 +1220,21 @@
         },
         {
             "name": "ifcastle/amphp-engine",
-            "version": "v0.1.0",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/ifcastle-amphp-engine.git",
-                "reference": "fa34bd7a2eaaa70644eb89edecb19cf9b6cc1fa8"
+                "reference": "846547afbfa15c4af84cc13b3c45d7f650869e56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-amphp-engine/zipball/fa34bd7a2eaaa70644eb89edecb19cf9b6cc1fa8",
-                "reference": "fa34bd7a2eaaa70644eb89edecb19cf9b6cc1fa8",
+                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-amphp-engine/zipball/846547afbfa15c4af84cc13b3c45d7f650869e56",
+                "reference": "846547afbfa15c4af84cc13b3c45d7f650869e56",
                 "shasum": ""
             },
             "require": {
                 "amphp/amp": "^3.0",
-                "ifcastle/application": "^0.5.0"
+                "ifcastle/application": "^0.6.0"
             },
             "require-dev": {
                 "amphp/php-cs-fixer-config": "^2.1",
@@ -1270,9 +1270,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/ifcastle-amphp-engine/issues",
-                "source": "https://github.com/EdmondDantes/ifcastle-amphp-engine/tree/v0.1.0"
+                "source": "https://github.com/EdmondDantes/ifcastle-amphp-engine/tree/v0.1.1"
             },
-            "time": "2024-08-18T13:55:14+00:00"
+            "time": "2024-08-18T18:18:48+00:00"
         },
         {
             "name": "ifcastle/amphp-pool",
@@ -1350,16 +1350,16 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.5.11",
+            "version": "v0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "cefeb75e60dd6949ab62dc8427576f1f00b0aacf"
+                "reference": "cd3a69b10cb8df6c73e50511dfa92276c7c78091"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/cefeb75e60dd6949ab62dc8427576f1f00b0aacf",
-                "reference": "cefeb75e60dd6949ab62dc8427576f1f00b0aacf",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/cd3a69b10cb8df6c73e50511dfa92276c7c78091",
+                "reference": "cd3a69b10cb8df6c73e50511dfa92276c7c78091",
                 "shasum": ""
             },
             "require": {
@@ -1392,9 +1392,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.5.11"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.6.2"
             },
-            "time": "2024-08-16T06:13:52+00:00"
+            "time": "2024-08-18T18:39:45+00:00"
         },
         {
             "name": "ifcastle/design-patterns",
