@@ -7,7 +7,6 @@ use IfCastle\Application\ApplicationAbstract;
 use IfCastle\Application\Bootloader\BootloaderExecutorInterface;
 use IfCastle\Application\EngineInterface;
 use IfCastle\Application\EngineRolesEnum;
-use IfCastle\DI\ConstructibleDependency;
 
 class WebServerApplication          extends ApplicationAbstract
 {
@@ -15,7 +14,7 @@ class WebServerApplication          extends ApplicationAbstract
     protected static function predefineEngine(BootloaderExecutorInterface $bootloaderExecutor): void
     {
         $bootloaderExecutor->getBootloaderContext()->getSystemEnvironmentBootBuilder()
-            ->set(EngineInterface::class, new ConstructibleDependency(WebServerEngine::class));
+            ->bindConstructible(EngineInterface::class, WebServerEngine::class, isThrow: false);
     }
     
     #[\Override]
