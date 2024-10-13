@@ -37,7 +37,7 @@ declare(strict_types=1);
     }
 })();
 
-\IfCastle\AmphpWebServer\WebServerApplication::run((function(): string {
+\IfCastle\AmphpWebServer\WebServerApplication::runAndExit((function(): string {
   
     $possibleDirs = [__DIR__.'/../../', __DIR__.'/../', __DIR__.'/vendor/'];
     

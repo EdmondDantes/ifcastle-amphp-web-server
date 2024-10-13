@@ -1279,16 +1279,16 @@
         },
         {
             "name": "ifcastle/amphp-pool",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/amphp-pool.git",
-                "reference": "ab884c2c9e3b7dae960ece07775844f5c9b09ba9"
+                "reference": "7cff92eb862b7efa0b1b6009bc9be1f377335941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/amphp-pool/zipball/ab884c2c9e3b7dae960ece07775844f5c9b09ba9",
-                "reference": "ab884c2c9e3b7dae960ece07775844f5c9b09ba9",
+                "url": "https://api.github.com/repos/EdmondDantes/amphp-pool/zipball/7cff92eb862b7efa0b1b6009bc9be1f377335941",
+                "reference": "7cff92eb862b7efa0b1b6009bc9be1f377335941",
                 "shasum": ""
             },
             "require": {
@@ -1347,25 +1347,26 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/amphp-pool/issues",
-                "source": "https://github.com/EdmondDantes/amphp-pool/tree/v1.0.0"
+                "source": "https://github.com/EdmondDantes/amphp-pool/tree/v1.0.1"
             },
-            "time": "2024-07-13T08:55:49+00:00"
+            "time": "2024-10-13T08:51:38+00:00"
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.6.14",
+            "version": "v0.6.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "5d52a17ef81f87304ba389a0ac54761bc570640f"
+                "reference": "87c074ce850ee6d86f56ec8d8aec46bb3380d54d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/5d52a17ef81f87304ba389a0ac54761bc570640f",
-                "reference": "5d52a17ef81f87304ba389a0ac54761bc570640f",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/87c074ce850ee6d86f56ec8d8aec46bb3380d54d",
+                "reference": "87c074ce850ee6d86f56ec8d8aec46bb3380d54d",
                 "shasum": ""
             },
             "require": {
+                "ifcastle/async-contracts": "^0.5.0",
                 "ifcastle/design-patterns": "^0.2.20",
                 "ifcastle/di": "^0.6.7",
                 "ifcastle/os-utilities": "^0.5.0",
@@ -1395,9 +1396,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.6.14"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.6.16"
             },
-            "time": "2024-10-12T12:27:37+00:00"
+            "time": "2024-10-13T07:55:22+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -1436,16 +1437,16 @@
         },
         {
             "name": "ifcastle/design-patterns",
-            "version": "v0.2.21",
+            "version": "v0.2.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/design-patterns.git",
-                "reference": "14753ed26da0acd8c63e9991c316750a930d3be9"
+                "reference": "687960b9cd2d96dce9bbf97c051fd598f9ee1731"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/14753ed26da0acd8c63e9991c316750a930d3be9",
-                "reference": "14753ed26da0acd8c63e9991c316750a930d3be9",
+                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/687960b9cd2d96dce9bbf97c051fd598f9ee1731",
+                "reference": "687960b9cd2d96dce9bbf97c051fd598f9ee1731",
                 "shasum": ""
             },
             "require": {
@@ -1475,9 +1476,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/design-patterns/issues",
-                "source": "https://github.com/EdmondDantes/design-patterns/tree/v0.2.21"
+                "source": "https://github.com/EdmondDantes/design-patterns/tree/v0.2.23"
             },
-            "time": "2024-09-22T06:53:38+00:00"
+            "time": "2024-10-13T07:19:02+00:00"
         },
         {
             "name": "ifcastle/di",

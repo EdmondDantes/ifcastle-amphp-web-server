@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace IfCastle\AmphpWebServer;
 
 use IfCastle\AmpPool\WorkerPool;
+use IfCastle\Application\Environment\SystemEnvironmentInterface;
 use IfCastle\Application\WorkerPool\WorkerTypeEnum;
 use IfCastle\AmpPool\WorkerTypeEnum as WorkerPoolTypeEnum;
 use IfCastle\Application\WorkerPool\WorkerGroup;
@@ -13,6 +14,7 @@ use IfCastle\Application\WorkerPool\WorkerPoolInterface;
 use IfCastle\Application\WorkerPool\WorkerState;
 use IfCastle\Application\WorkerPool\WorkerStateInterface;
 use IfCastle\DI\ConfigInterface;
+use IfCastle\OsUtilities\Safe;
 use Psr\Log\LoggerInterface;
 
 class WebServerEngine               extends \IfCastle\Amphp\AmphpEngine
@@ -21,7 +23,10 @@ class WebServerEngine               extends \IfCastle\Amphp\AmphpEngine
     protected array $workerGroups = [];
     protected WorkerPool|null $workerPool = null;
     
-    public function __construct(ConfigInterface $configuration, private readonly LoggerInterface|null $logger = null)
+    public function __construct(
+        ConfigInterface $configuration,
+        protected string $applicationDirectory,
+        protected readonly LoggerInterface|null $logger = null)
     {
         $this->applyConfiguration($configuration->findSection('server'));
     }
@@ -33,7 +38,15 @@ class WebServerEngine               extends \IfCastle\Amphp\AmphpEngine
             return;
         }
         
+        // Change directory to the application directory
+        if(\getcwd() !== $this->applicationDirectory) {
+            if(false === Safe::execute(static fn() => \chdir($this->applicationDirectory))) {
+                throw new \RuntimeException('Unable to change directory to ' . $this->applicationDirectory);
+            }
+        }
+        
         $this->workerPool       = new WorkerPool(logger: $this->logger);
+        $this->workerPool->setPoolContext([SystemEnvironmentInterface::APPLICATION_DIR => $this->applicationDirectory]);
         
         foreach ($this->workerGroups as $group) {
             $this->workerPool->describeGroup($group);
@@ -150,7 +163,7 @@ class WebServerEngine               extends \IfCastle\Amphp\AmphpEngine
         $this->describeGroup(new WorkerGroup(
                                  HttpReactor::class,
                                  WorkerTypeEnum::REACTOR,
-                                 (int)$reactors,
+                                 $reactors,
                                  0,
                                  'Reactors'
                              ));
@@ -158,7 +171,7 @@ class WebServerEngine               extends \IfCastle\Amphp\AmphpEngine
         $this->describeGroup(new WorkerGroup(
                                  JobWorker::class,
                                  WorkerTypeEnum::JOB,
-                                 (int)$jobs,
+                                 $jobs,
                                  0,
                                  'Jobs'
                              ));
