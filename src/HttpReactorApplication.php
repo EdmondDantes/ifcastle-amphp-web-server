@@ -22,7 +22,9 @@ class HttpReactorApplication        extends ApplicationAbstract
         
         self::$worker               = null;
         
-        $bootloaderExecutor->getBootloaderContext()->getRequestEnvironmentBuilder()->addBeforeHandler(HttpProtocolBuilder::class);
+        $bootloaderExecutor->getBootloaderContext()
+                           ->getRequestEnvironmentPlan()
+                           ->addBuildHandler(new HttpProtocolBuilder);
     }
     
     #[\Override]
