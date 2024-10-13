@@ -15,7 +15,7 @@
         }
     },
     "require": {
-        "ifcastle/application": "^0.6.0",
+        "ifcastle/application": "^0.6.17",
         "ifcastle/service-manager": "^0.5.0",
         "ifcastle/amphp-engine": "^0.1.0",
         "ifcastle/amphp-pool": "^1.0",

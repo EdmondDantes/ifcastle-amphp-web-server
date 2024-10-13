@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c0f3be575e2eca31c3199045404f9e2",
+    "content-hash": "18c1845ade780e0c4a04eb12414591cb",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1353,16 +1353,16 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.6.16",
+            "version": "v0.6.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "87c074ce850ee6d86f56ec8d8aec46bb3380d54d"
+                "reference": "157db8bf721728c00b726b692cae4aaac1902a2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/87c074ce850ee6d86f56ec8d8aec46bb3380d54d",
-                "reference": "87c074ce850ee6d86f56ec8d8aec46bb3380d54d",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/157db8bf721728c00b726b692cae4aaac1902a2a",
+                "reference": "157db8bf721728c00b726b692cae4aaac1902a2a",
                 "shasum": ""
             },
             "require": {
@@ -1370,6 +1370,7 @@
                 "ifcastle/design-patterns": "^0.2.20",
                 "ifcastle/di": "^0.6.7",
                 "ifcastle/os-utilities": "^0.5.0",
+                "ifcastle/protocol-contracts": "^0.5.0",
                 "ifcastle/service-manager": "^0.5.7",
                 "psr/log": "^3.0"
             },
@@ -1396,9 +1397,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.6.16"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.6.17"
             },
-            "time": "2024-10-13T07:55:22+00:00"
+            "time": "2024-10-13T18:12:29+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -1437,16 +1438,16 @@
         },
         {
             "name": "ifcastle/design-patterns",
-            "version": "v0.2.23",
+            "version": "v0.2.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/design-patterns.git",
-                "reference": "687960b9cd2d96dce9bbf97c051fd598f9ee1731"
+                "reference": "77d0b28d180c1ca3e67f31ad528e02906cc6f4ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/687960b9cd2d96dce9bbf97c051fd598f9ee1731",
-                "reference": "687960b9cd2d96dce9bbf97c051fd598f9ee1731",
+                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/77d0b28d180c1ca3e67f31ad528e02906cc6f4ea",
+                "reference": "77d0b28d180c1ca3e67f31ad528e02906cc6f4ea",
                 "shasum": ""
             },
             "require": {
@@ -1476,9 +1477,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/design-patterns/issues",
-                "source": "https://github.com/EdmondDantes/design-patterns/tree/v0.2.23"
+                "source": "https://github.com/EdmondDantes/design-patterns/tree/v0.2.24"
             },
-            "time": "2024-10-13T07:19:02+00:00"
+            "time": "2024-10-13T16:22:13+00:00"
         },
         {
             "name": "ifcastle/di",

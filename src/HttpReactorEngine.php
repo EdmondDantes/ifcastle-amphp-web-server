@@ -3,20 +3,24 @@ declare(strict_types=1);
 
 namespace IfCastle\AmphpWebServer;
 
-use Amp\Http\HttpStatus;
 use Amp\Http\Server\DefaultErrorHandler;
 use Amp\Http\Server\Driver\SocketClientFactory;
+use Amp\Http\Server\Request;
 use Amp\Http\Server\RequestHandler\ClosureRequestHandler;
 use Amp\Http\Server\Response;
 use Amp\Http\Server\SocketHttpServer;
 use Amp\Socket\BindContext;
 use IfCastle\AmpPool\Worker\WorkerInterface;
+use IfCastle\Application\Environment\SystemEnvironmentInterface;
+use IfCastle\Application\RequestEnvironment\RequestEnvironment;
+use IfCastle\Application\RequestEnvironment\RequestPlanInterface;
+use IfCastle\Exceptions\UnexpectedValueType;
 
 final class HttpReactorEngine       extends \IfCastle\Amphp\AmphpEngine
 {
     private \WeakReference|null $worker = null;
     
-    public function __construct(WorkerInterface $worker)
+    public function __construct(WorkerInterface $worker, private readonly SystemEnvironmentInterface $systemEnvironment)
     {
         $this->worker               = \WeakReference::create($worker);
     }
@@ -37,18 +41,29 @@ final class HttpReactorEngine       extends \IfCastle\Amphp\AmphpEngine
         // 2. Expose the server to the network
         $httpServer->expose('127.0.0.1:9095', (new BindContext)->withTcpNoDelay());
         
+        $requestPlan                = $this->systemEnvironment->resolveDependency(RequestPlanInterface::class);
+        $systemEnvironment          = $this->systemEnvironment;
+        
         // 3. Handle incoming connections and start the server
         $httpServer->start(
-            new ClosureRequestHandler(static function () use ($worker): Response {
+            new ClosureRequestHandler(static function (Request $request) use ($requestPlan, $systemEnvironment): Response
+            {
+                $requestEnv         = new RequestEnvironment($request, $systemEnvironment);
                 
-                return new Response(
-                    HttpStatus::OK,
-                    [
-                        'content-type' => 'text/plain; charset=utf-8',
-                    ],
-                    'Hello, World! From worker id: '.$worker->getWorkerId()
-                    .' and group id: '.$worker->getWorkerGroupId()
-                );
+                try {
+                    $systemEnvironment->setRequestEnvironment($requestEnv);
+                    $requestPlan->executePlan($requestEnv);
+                } finally {
+                    $requestEnv->dispose();
+                }
+                
+                $response           = $requestEnv->getResponse();
+                
+                if($response instanceof Response) {
+                    return $response;
+                } else {
+                    throw new UnexpectedValueType('response', $response, Response::class);
+                }
             }),
             new DefaultErrorHandler(),
         );
