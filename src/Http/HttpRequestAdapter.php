@@ -3,9 +3,11 @@ declare(strict_types=1);
 
 namespace IfCastle\AmphpWebServer\Http;
 
+use Amp\ByteStream\BufferException;
 use IfCastle\Amphp\ReadableStreamAdapter;
 use IfCastle\Async\ReadableStreamInterface;
 use IfCastle\DI\DisposableInterface;
+use IfCastle\Protocol\Exceptions\ParseException;
 use IfCastle\Protocol\FileContainerInterface;
 use IfCastle\Protocol\Http\HttpRequestForm;
 use IfCastle\Protocol\Http\HttpRequestInterface;
@@ -161,6 +163,10 @@ class HttpRequestAdapter            implements HttpRequestInterface, DisposableI
         return $this->request->hasQueryParameter($name);
     }
     
+    /**
+     * @throws ParseException
+     * @throws BufferException
+     */
     #[\Override]
     public function retrieveRequestForm(): HttpRequestForm|null
     {
