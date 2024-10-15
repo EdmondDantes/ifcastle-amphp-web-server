@@ -3,13 +3,18 @@ declare(strict_types=1);
 
 namespace IfCastle\AmphpWebServer\Http;
 
+use IfCastle\Amphp\ReadableStreamAdapter;
 use IfCastle\Async\ReadableStreamInterface;
+use IfCastle\DI\DisposableInterface;
 use IfCastle\Protocol\FileContainerInterface;
+use IfCastle\Protocol\Http\HttpRequestForm;
 use IfCastle\Protocol\Http\HttpRequestInterface;
 use Amp\Http\Server\Request;
 
-class HttpRequestAdapter            implements HttpRequestInterface
+class HttpRequestAdapter            implements HttpRequestInterface, DisposableInterface
 {
+    private HttpRequestForm|null|false $form = false;
+    
     public function __construct(private readonly Request $request) {}
     
     #[\Override]
@@ -61,7 +66,7 @@ class HttpRequestAdapter            implements HttpRequestInterface
     #[\Override]
     public function getBodyStream(): ?ReadableStreamInterface
     {
-        return $this->request->getBody();
+        return new ReadableStreamAdapter($this->request->getBody());
     }
     
     #[\Override]
@@ -154,5 +159,43 @@ class HttpRequestAdapter            implements HttpRequestInterface
     public function hasUploadedFile(string $name): bool
     {
         return $this->request->hasQueryParameter($name);
+    }
+    
+    #[\Override]
+    public function retrieveRequestForm(): HttpRequestForm|null
+    {
+        if($this->form === false) {
+            return null;
+        }
+        
+        if($this->form !== null) {
+            return $this->form;
+        }
+        
+        $contentType                = $this->request->getHeader('content-type');
+        
+        if(false === in_array($contentType, ['application/x-www-form-urlencoded', 'multipart/form-data'], true)) {
+            $this->form             = false;
+            return null;
+        }
+        
+        $body                       = new HttpBodyParser(
+            $this->request->getBody(),
+            $contentType
+        );
+        
+        $this->form                 = new HttpRequestForm(
+            $this->request->getQueryParameters(),
+            $body->getRequestParameters(),
+            $body->getRequestFiles()
+        );
+        
+        return $this->form;
+    }
+    
+    #[\Override]
+    public function dispose(): void
+    {
+        $this->form                 = null;
     }
 }

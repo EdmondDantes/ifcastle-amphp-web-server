@@ -1220,22 +1220,24 @@
         },
         {
             "name": "ifcastle/amphp-engine",
-            "version": "v0.1.2",
+            "version": "v0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/ifcastle-amphp-engine.git",
-                "reference": "b05073a40096a8fb142f7c278377f6972c0058ee"
+                "reference": "06f9d1ecbdd2ee1638f2dcb833b1ca5b3c506829"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-amphp-engine/zipball/b05073a40096a8fb142f7c278377f6972c0058ee",
-                "reference": "b05073a40096a8fb142f7c278377f6972c0058ee",
+                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-amphp-engine/zipball/06f9d1ecbdd2ee1638f2dcb833b1ca5b3c506829",
+                "reference": "06f9d1ecbdd2ee1638f2dcb833b1ca5b3c506829",
                 "shasum": ""
             },
             "require": {
                 "amphp/amp": "^3.0",
+                "amphp/byte-stream": "^2.1",
                 "amphp/sync": "^2.3",
                 "ifcastle/application": "^0.6.0",
+                "ifcastle/async-contracts": "^0.5.0",
                 "ifcastle/design-patterns": "^v0.2.20"
             },
             "require-dev": {
@@ -1273,9 +1275,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/ifcastle-amphp-engine/issues",
-                "source": "https://github.com/EdmondDantes/ifcastle-amphp-engine/tree/v0.1.2"
+                "source": "https://github.com/EdmondDantes/ifcastle-amphp-engine/tree/v0.1.3"
             },
-            "time": "2024-09-14T16:02:22+00:00"
+            "time": "2024-10-15T10:31:01+00:00"
         },
         {
             "name": "ifcastle/amphp-pool",
@@ -1353,16 +1355,16 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.6.17",
+            "version": "v0.6.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "157db8bf721728c00b726b692cae4aaac1902a2a"
+                "reference": "8843a727ded27fe8915fabc180fc1d62742c03c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/157db8bf721728c00b726b692cae4aaac1902a2a",
-                "reference": "157db8bf721728c00b726b692cae4aaac1902a2a",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/8843a727ded27fe8915fabc180fc1d62742c03c0",
+                "reference": "8843a727ded27fe8915fabc180fc1d62742c03c0",
                 "shasum": ""
             },
             "require": {
@@ -1397,9 +1399,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.6.17"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.6.18"
             },
-            "time": "2024-10-13T18:12:29+00:00"
+            "time": "2024-10-14T09:26:58+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -1622,21 +1624,22 @@
         },
         {
             "name": "ifcastle/protocol-contracts",
-            "version": "v0.5.2",
+            "version": "v0.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/protocol-contracts.git",
-                "reference": "4c731b0ae8734df0d78da7b1d2d37e3378adcaf4"
+                "reference": "bce46bd472819bf7665cf2b352ec39c308f2c924"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/protocol-contracts/zipball/4c731b0ae8734df0d78da7b1d2d37e3378adcaf4",
-                "reference": "4c731b0ae8734df0d78da7b1d2d37e3378adcaf4",
+                "url": "https://api.github.com/repos/EdmondDantes/protocol-contracts/zipball/bce46bd472819bf7665cf2b352ec39c308f2c924",
+                "reference": "bce46bd472819bf7665cf2b352ec39c308f2c924",
                 "shasum": ""
             },
             "require": {
                 "ifcastle/async-contracts": "^0.5.0",
-                "ifcastle/di": "^0.6.8"
+                "ifcastle/di": "^0.6.8",
+                "ifcastle/exceptions": "^5.0"
             },
             "type": "library",
             "autoload": {
@@ -1655,9 +1658,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/protocol-contracts/issues",
-                "source": "https://github.com/EdmondDantes/protocol-contracts/tree/v0.5.2"
+                "source": "https://github.com/EdmondDantes/protocol-contracts/tree/v0.5.5"
             },
-            "time": "2024-10-14T09:09:28+00:00"
+            "time": "2024-10-15T08:30:48+00:00"
         },
         {
             "name": "ifcastle/service-manager",
