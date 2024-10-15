@@ -12,12 +12,19 @@ use IfCastle\Protocol\FileContainerInterface;
 use IfCastle\Protocol\Http\HttpRequestForm;
 use IfCastle\Protocol\Http\HttpRequestInterface;
 use Amp\Http\Server\Request;
+use Psr\Http\Message\UriInterface as PsrUri;
 
 class HttpRequestAdapter            implements HttpRequestInterface, DisposableInterface
 {
     private HttpRequestForm|null|false $form = false;
     
     public function __construct(private readonly Request $request) {}
+    
+    #[\Override]
+    public function getUri(): PsrUri
+    {
+        return $this->request->getUri();
+    }
     
     #[\Override]
     public function getHeaders(): array

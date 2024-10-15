@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18c1845ade780e0c4a04eb12414591cb",
+    "content-hash": "9059c1b542803af402b066e71f16b4a1",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1624,22 +1624,23 @@
         },
         {
             "name": "ifcastle/protocol-contracts",
-            "version": "v0.5.5",
+            "version": "v0.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/protocol-contracts.git",
-                "reference": "bce46bd472819bf7665cf2b352ec39c308f2c924"
+                "reference": "704a87a64d433d08ad4bf554bd28ac4300b4cc55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/protocol-contracts/zipball/bce46bd472819bf7665cf2b352ec39c308f2c924",
-                "reference": "bce46bd472819bf7665cf2b352ec39c308f2c924",
+                "url": "https://api.github.com/repos/EdmondDantes/protocol-contracts/zipball/704a87a64d433d08ad4bf554bd28ac4300b4cc55",
+                "reference": "704a87a64d433d08ad4bf554bd28ac4300b4cc55",
                 "shasum": ""
             },
             "require": {
                 "ifcastle/async-contracts": "^0.5.0",
                 "ifcastle/di": "^0.6.8",
-                "ifcastle/exceptions": "^5.0"
+                "ifcastle/exceptions": "^5.0",
+                "psr/http-message": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -1658,9 +1659,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/protocol-contracts/issues",
-                "source": "https://github.com/EdmondDantes/protocol-contracts/tree/v0.5.5"
+                "source": "https://github.com/EdmondDantes/protocol-contracts/tree/v0.5.8"
             },
-            "time": "2024-10-15T08:30:48+00:00"
+            "time": "2024-10-15T15:18:54+00:00"
         },
         {
             "name": "ifcastle/service-manager",
