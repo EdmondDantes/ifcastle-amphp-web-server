@@ -5,9 +5,10 @@ namespace IfCastle\AmphpWebServer;
 
 use IfCastle\Application\RequestEnvironment\RequestEnvironmentInterface;
 use Amp\Http\Server\Request;
+use IfCastle\Protocol\Http\HttpRequestInterface;
 use IfCastle\Protocol\RequestInterface;
 
-class HttpProtocolBuilder
+final class HttpProtocolBuilder
 {
     public function __invoke(RequestEnvironmentInterface $requestEnvironment): void
     {
@@ -22,6 +23,6 @@ class HttpProtocolBuilder
             return;
         }
         
-        //$requestEnvironment->set
+        $requestEnvironment->set(HttpRequestInterface::class, new Http\HttpRequestAdapter($originalRequest));
     }
 }
