@@ -11,6 +11,7 @@ use Amp\Http\Server\Response;
 use Amp\Http\Server\SocketHttpServer;
 use Amp\Socket\BindContext;
 use IfCastle\AmpPool\Worker\WorkerInterface;
+use IfCastle\Application\Environment\PublicEnvironmentInterface;
 use IfCastle\Application\Environment\SystemEnvironmentInterface;
 use IfCastle\Application\RequestEnvironment\RequestEnvironment;
 use IfCastle\Application\RequestEnvironment\RequestPlanInterface;
@@ -43,15 +44,17 @@ final class HttpReactorEngine       extends \IfCastle\Amphp\AmphpEngine
         
         $requestPlan                = $this->systemEnvironment->resolveDependency(RequestPlanInterface::class);
         $systemEnvironment          = $this->systemEnvironment;
+        $publicEnvironment          = $systemEnvironment->findDependency(PublicEnvironmentInterface::class);
+        $environment                = $publicEnvironment ?? $systemEnvironment;
         
         // 3. Handle incoming connections and start the server
         $httpServer->start(
-            new ClosureRequestHandler(static function (Request $request) use ($requestPlan, $systemEnvironment): Response
+            new ClosureRequestHandler(static function (Request $request) use ($requestPlan, $environment): Response
             {
-                $requestEnv         = new RequestEnvironment($request, $systemEnvironment);
+                $requestEnv         = new RequestEnvironment($request, $environment);
                 
                 try {
-                    $systemEnvironment->setRequestEnvironment($requestEnv);
+                    $environment->setRequestEnvironment($requestEnv);
                     $requestPlan->executePlan($requestEnv);
                 } finally {
                     $requestEnv->dispose();
