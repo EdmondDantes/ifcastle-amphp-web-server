@@ -1355,22 +1355,23 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.6.19",
+            "version": "v0.6.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "e75696ace62bc9a72106a24b696a04b824603d76"
+                "reference": "4cb18e3dcbe583c6825b21f55d4d3910ab01ca78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/e75696ace62bc9a72106a24b696a04b824603d76",
-                "reference": "e75696ace62bc9a72106a24b696a04b824603d76",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/4cb18e3dcbe583c6825b21f55d4d3910ab01ca78",
+                "reference": "4cb18e3dcbe583c6825b21f55d4d3910ab01ca78",
                 "shasum": ""
             },
             "require": {
                 "ifcastle/async-contracts": "^0.5.0",
                 "ifcastle/design-patterns": "^0.2.20",
                 "ifcastle/di": "^0.6.7",
+                "ifcastle/exceptions": "^5.0",
                 "ifcastle/os-utilities": "^0.5.0",
                 "ifcastle/protocol-contracts": "^0.5.0",
                 "ifcastle/service-manager": "^0.5.7",
@@ -1399,9 +1400,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.6.19"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.6.20"
             },
-            "time": "2024-10-15T12:01:26+00:00"
+            "time": "2024-10-17T14:59:32+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -1440,16 +1441,16 @@
         },
         {
             "name": "ifcastle/design-patterns",
-            "version": "v0.2.24",
+            "version": "v0.2.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/design-patterns.git",
-                "reference": "77d0b28d180c1ca3e67f31ad528e02906cc6f4ea"
+                "reference": "b343a920a46fd6d73c5bac215e0baba5d0d5d700"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/77d0b28d180c1ca3e67f31ad528e02906cc6f4ea",
-                "reference": "77d0b28d180c1ca3e67f31ad528e02906cc6f4ea",
+                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/b343a920a46fd6d73c5bac215e0baba5d0d5d700",
+                "reference": "b343a920a46fd6d73c5bac215e0baba5d0d5d700",
                 "shasum": ""
             },
             "require": {
@@ -1479,9 +1480,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/design-patterns/issues",
-                "source": "https://github.com/EdmondDantes/design-patterns/tree/v0.2.24"
+                "source": "https://github.com/EdmondDantes/design-patterns/tree/v0.2.25"
             },
-            "time": "2024-10-13T16:22:13+00:00"
+            "time": "2024-10-15T16:19:39+00:00"
         },
         {
             "name": "ifcastle/di",
@@ -1624,16 +1625,16 @@
         },
         {
             "name": "ifcastle/protocol-contracts",
-            "version": "v0.5.8",
+            "version": "v0.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/protocol-contracts.git",
-                "reference": "704a87a64d433d08ad4bf554bd28ac4300b4cc55"
+                "reference": "18c662d04ee7043526f4cecb3c923e7106bfc156"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/protocol-contracts/zipball/704a87a64d433d08ad4bf554bd28ac4300b4cc55",
-                "reference": "704a87a64d433d08ad4bf554bd28ac4300b4cc55",
+                "url": "https://api.github.com/repos/EdmondDantes/protocol-contracts/zipball/18c662d04ee7043526f4cecb3c923e7106bfc156",
+                "reference": "18c662d04ee7043526f4cecb3c923e7106bfc156",
                 "shasum": ""
             },
             "require": {
@@ -1659,9 +1660,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/protocol-contracts/issues",
-                "source": "https://github.com/EdmondDantes/protocol-contracts/tree/v0.5.8"
+                "source": "https://github.com/EdmondDantes/protocol-contracts/tree/v0.5.9"
             },
-            "time": "2024-10-15T15:18:54+00:00"
+            "time": "2024-10-15T16:52:02+00:00"
         },
         {
             "name": "ifcastle/service-manager",
@@ -1709,16 +1710,16 @@
         },
         {
             "name": "ifcastle/type-definitions",
-            "version": "v0.5.9",
+            "version": "v0.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/type-definitions.git",
-                "reference": "6efa5deacade1df297ea23b258e12ac2de15c2bf"
+                "reference": "fa1f1047cfd7c4952eab7d4a95c430939e983523"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/type-definitions/zipball/6efa5deacade1df297ea23b258e12ac2de15c2bf",
-                "reference": "6efa5deacade1df297ea23b258e12ac2de15c2bf",
+                "url": "https://api.github.com/repos/EdmondDantes/type-definitions/zipball/fa1f1047cfd7c4952eab7d4a95c430939e983523",
+                "reference": "fa1f1047cfd7c4952eab7d4a95c430939e983523",
                 "shasum": ""
             },
             "require": {
@@ -1751,9 +1752,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/type-definitions/issues",
-                "source": "https://github.com/EdmondDantes/type-definitions/tree/v0.5.9"
+                "source": "https://github.com/EdmondDantes/type-definitions/tree/v0.5.10"
             },
-            "time": "2024-09-16T13:22:05+00:00"
+            "time": "2024-10-17T13:19:08+00:00"
         },
         {
             "name": "kelunik/certificate",

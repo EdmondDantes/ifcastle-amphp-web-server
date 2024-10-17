@@ -20,6 +20,8 @@ class HttpReactorApplication        extends ApplicationAbstract
                            ->bindConstructible(EngineInterface::class, WebServerEngine::class, isThrow: false)
                            ->bindObject(WorkerInterface::class, self::$worker);
         
+        $bootloaderExecutor->getBootloaderContext()->enabledWarmUp();
+        
         self::$worker               = null;
         
         $bootloaderExecutor->getBootloaderContext()
