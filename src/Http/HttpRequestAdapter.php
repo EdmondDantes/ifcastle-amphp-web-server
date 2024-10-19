@@ -138,12 +138,16 @@ class HttpRequestAdapter            implements HttpRequestInterface, DisposableI
         return true;
     }
     
+    /**
+     * @throws ParseException
+     * @throws BufferException
+     */
     #[\Override]
     public function getUploadedFiles(): array
     {
         $result                     = [];
         
-        foreach ($this->request->getQueryParameters() as $name => $file) {
+        foreach ($this->retrieveRequestForm()?->files ?? [] as $name => $file) {
             if($file instanceof FileContainerInterface) {
                 $result[$name]      = $file;
             }
@@ -152,13 +156,17 @@ class HttpRequestAdapter            implements HttpRequestInterface, DisposableI
         return $result;
     }
     
+    /**
+     * @throws ParseException
+     * @throws BufferException
+     */
     #[\Override]
     public function getUploadedFile(string $name): ?FileContainerInterface
     {
-        $file                       = $this->request->getQueryParameter($name);
-        
-        if($file instanceof FileContainerInterface) {
-            return $file;
+        foreach ($this->retrieveRequestForm()?->files ?? [] as $fileName => $file) {
+            if($fileName === $name && $file instanceof FileContainerInterface) {
+                return $file;
+            }
         }
         
         return null;
