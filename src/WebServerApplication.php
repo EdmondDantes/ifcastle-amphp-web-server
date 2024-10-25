@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace IfCastle\AmphpWebServer;
@@ -8,7 +9,7 @@ use IfCastle\Application\Bootloader\BootloaderExecutorInterface;
 use IfCastle\Application\EngineInterface;
 use IfCastle\Application\EngineRolesEnum;
 
-class WebServerApplication          extends ApplicationAbstract
+class WebServerApplication extends ApplicationAbstract
 {
     #[\Override]
     protected static function predefineEngine(BootloaderExecutorInterface $bootloaderExecutor): void
@@ -16,7 +17,7 @@ class WebServerApplication          extends ApplicationAbstract
         $bootloaderExecutor->getBootloaderContext()->getSystemEnvironmentBootBuilder()
             ->bindConstructible(EngineInterface::class, WebServerEngine::class, isThrow: false);
     }
-    
+
     #[\Override]
     protected function defineEngineRole(): EngineRolesEnum
     {

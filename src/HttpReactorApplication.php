@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace IfCastle\AmphpWebServer;
@@ -9,26 +10,26 @@ use IfCastle\Application\Bootloader\BootloaderExecutorInterface;
 use IfCastle\Application\EngineInterface;
 use IfCastle\Application\EngineRolesEnum;
 
-class HttpReactorApplication        extends ApplicationAbstract
+class HttpReactorApplication extends ApplicationAbstract
 {
-    static public \WeakReference|null $worker;
-    
+    public static \WeakReference|null $worker;
+
     #[\Override]
     protected static function predefineEngine(BootloaderExecutorInterface $bootloaderExecutor): void
     {
         $bootloaderExecutor->getBootloaderContext()->getSystemEnvironmentBootBuilder()
                            ->bindConstructible(EngineInterface::class, WebServerEngine::class, isThrow: false)
                            ->bindObject(WorkerInterface::class, self::$worker);
-        
+
         $bootloaderExecutor->getBootloaderContext()->enabledWarmUp();
-        
+
         self::$worker               = null;
-        
+
         $bootloaderExecutor->getBootloaderContext()
                            ->getRequestEnvironmentPlan()
-                           ->addBuildHandler(new HttpProtocolBuilder);
+                           ->addBuildHandler(new HttpProtocolBuilder());
     }
-    
+
     #[\Override]
     protected function defineEngineRole(): EngineRolesEnum
     {

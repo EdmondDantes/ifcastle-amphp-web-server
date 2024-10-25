@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace IfCastle\AmphpWebServer;
@@ -17,63 +18,62 @@ use IfCastle\Application\RequestEnvironment\RequestEnvironment;
 use IfCastle\Application\RequestEnvironment\RequestPlanInterface;
 use IfCastle\Exceptions\UnexpectedValueType;
 
-final class HttpReactorEngine       extends \IfCastle\Amphp\AmphpEngine
+final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
 {
     private \WeakReference|null $worker = null;
-    
+
     public function __construct(WorkerInterface $worker, private readonly SystemEnvironmentInterface $systemEnvironment)
     {
         $this->worker               = \WeakReference::create($worker);
     }
-    
+
     #[\Override]
     public function start(): void
     {
         $worker                     = $this->worker->get();
-        
+
         if ($worker === null) {
             return;
         }
-        
+
         $socketFactory              = $worker->getWorkerGroup()->getSocketStrategy()->getServerSocketFactory();
         $clientFactory              = new SocketClientFactory($worker->getLogger());
         $httpServer                 = new SocketHttpServer($worker->getLogger(), $socketFactory, $clientFactory);
-        
+
         // 2. Expose the server to the network
-        $httpServer->expose('127.0.0.1:9095', (new BindContext)->withTcpNoDelay());
-        
+        $httpServer->expose('127.0.0.1:9095', (new BindContext())->withTcpNoDelay());
+
         $requestPlan                = $this->systemEnvironment->resolveDependency(RequestPlanInterface::class);
         $systemEnvironment          = $this->systemEnvironment;
         $publicEnvironment          = $systemEnvironment->findDependency(PublicEnvironmentInterface::class);
         $environment                = $publicEnvironment ?? $systemEnvironment;
-        
+
         // 3. Handle incoming connections and start the server
         $httpServer->start(
-            new ClosureRequestHandler(static function (Request $request) use ($requestPlan, $environment): Response
-            {
+            new ClosureRequestHandler(static function (Request $request) use ($requestPlan, $environment): Response {
                 $requestEnv         = new RequestEnvironment($request, $environment);
-                
+
                 try {
                     $environment->setRequestEnvironment($requestEnv);
                     $requestPlan->executePlan($requestEnv);
                 } finally {
                     $requestEnv->dispose();
                 }
-                
+
                 $response           = $requestEnv->getResponse();
-                
-                if($response instanceof Response) {
+
+                if ($response instanceof Response) {
                     return $response;
-                } else {
-                    throw new UnexpectedValueType('response', $response, Response::class);
                 }
+                throw new UnexpectedValueType('response', $response, Response::class);
+
             }),
             new DefaultErrorHandler(),
         );
-        
+
         // 4. Await termination of the worker
         $worker->awaitTermination();
-        
+
         // 5. Stop the HTTP server
         $httpServer->stop();
     }
