@@ -65,6 +65,7 @@ final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
                 if ($response instanceof Response) {
                     return $response;
                 }
+
                 throw new UnexpectedValueType('response', $response, Response::class);
 
             }),

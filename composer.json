@@ -15,14 +15,15 @@
         }
     },
     "require": {
-        "ifcastle/application": "^0.7.2",
+        "ifcastle/application": "^0.7.3",
         "ifcastle/service-manager": "^0.5.0",
         "ifcastle/amphp-engine": "^0.2.0",
         "ifcastle/amphp-pool": "^1.0",
         "ifcastle/protocol-contracts": "^0.5.7"
     },
     "require-dev": {
-        "ifcastle/codestyle": "^0.1.1"
+        "ifcastle/codestyle": "^0.1.1",
+        "phpstan/phpstan": "^1.12"
     },
     "bin": [
         "amphp"

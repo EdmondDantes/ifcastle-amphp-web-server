@@ -12,11 +12,13 @@ final class HttpReactor implements WorkerEntryPointInterface
 {
     private ?\WeakReference $worker = null;
 
+    #[\Override]
     public function initialize(WorkerInterface $worker): void
     {
         $this->worker               = \WeakReference::create($worker);
     }
 
+    #[\Override]
     public function run(): void
     {
         $worker                     = $this->worker->get();

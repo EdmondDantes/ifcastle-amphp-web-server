@@ -14,17 +14,20 @@ final class JobWorker implements WorkerEntryPointInterface, JobHandlerInterface
 {
     private WorkerInterface $worker;
 
+    #[\Override]
     public function initialize(WorkerInterface $worker): void
     {
         $this->worker               = $worker;
         $worker->getWorkerGroup()->getJobExecutor()->defineJobHandler($this);
     }
 
+    #[\Override]
     public function run(): void
     {
         $this->worker->awaitTermination();
     }
 
+    #[\Override]
     public function handleJob(
         string              $data,
         ?CoroutineInterface $coroutine = null,
