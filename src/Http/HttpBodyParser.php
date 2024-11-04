@@ -15,8 +15,14 @@ use function Amp\ByteStream\buffer;
 
 final class HttpBodyParser
 {
+    /**
+     * @var array<string, string>|null
+     */
     protected array|null $requestParameters     = null;
 
+    /**
+     * @var array<string, FileContainer>|null
+     */
     protected array|null $requestFiles          = null;
 
     /**
@@ -32,11 +38,17 @@ final class HttpBodyParser
         $this->parseRequestParameters();
     }
 
+    /**
+     * @return array<string, string>|null
+     */
     public function getRequestParameters(): array|null
     {
         return $this->requestParameters;
     }
 
+    /**
+     * @return array<string, FileContainer>|null
+     */
     public function getRequestFiles(): array|null
     {
         return $this->requestFiles;
@@ -78,8 +90,6 @@ final class HttpBodyParser
     /**
      * Parse the given content-type and returns the boundary if parsing is supported,
      * an empty string content-type is url-encoded mode or null if not supported.
-     *
-     *
      */
     protected function parseContentBoundary(string $contentType): ?string
     {
@@ -159,6 +169,7 @@ final class HttpBodyParser
                 $matches
             );
 
+            /* @phpstan-ignore-next-line */
             if (!$count || !isset($matches[1])) {
                 throw new ParseException('Missing or invalid content disposition');
             }
@@ -173,6 +184,7 @@ final class HttpBodyParser
             }
         }
 
+        /* @phpstan-ignore-next-line */
         if (\str_contains($entry ?? '', '--' . $boundary)) {
             throw new ParseException('Maximum number of variables exceeded');
         }

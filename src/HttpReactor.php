@@ -10,6 +10,9 @@ use IfCastle\Application\Environment\SystemEnvironmentInterface;
 
 final class HttpReactor implements WorkerEntryPointInterface
 {
+    /**
+     * @var \WeakReference<WorkerInterface>|null
+     */
     private ?\WeakReference $worker = null;
 
     #[\Override]

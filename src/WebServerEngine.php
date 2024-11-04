@@ -20,8 +20,14 @@ use Psr\Log\LoggerInterface;
 
 class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolBuilderInterface, WorkerPoolInterface
 {
+    /**
+     * @var \IfCastle\AmpPool\WorkerGroupInterface[]
+     */
     protected array $workerGroups = [];
 
+    /**
+     * @var \IfCastle\AmpPool\WorkerPool<object, object>|null
+     */
     protected WorkerPool|null $workerPool = null;
 
     public function __construct(
@@ -40,7 +46,7 @@ class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolB
         }
 
         // Change directory to the application directory
-        if (\getcwd() !== $this->applicationDirectory && false === Safe::execute(static fn() => \chdir($this->applicationDirectory))) {
+        if (\getcwd() !== $this->applicationDirectory && false === Safe::execute(fn() => \chdir($this->applicationDirectory))) {
             throw new \RuntimeException('Unable to change directory to ' . $this->applicationDirectory);
         }
 
@@ -147,6 +153,9 @@ class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolB
         };
     }
 
+    /**
+     * @param array<string, mixed>|null $config
+     */
     private function applyConfiguration(array|null $config = null): void
     {
         if ($config === null) {

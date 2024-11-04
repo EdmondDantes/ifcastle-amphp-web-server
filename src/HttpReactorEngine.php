@@ -20,6 +20,9 @@ use IfCastle\Exceptions\UnexpectedValueType;
 
 final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
 {
+    /**
+     * @var \WeakReference<WorkerInterface>|null
+     */
     private \WeakReference|null $worker = null;
 
     public function __construct(WorkerInterface $worker, private readonly SystemEnvironmentInterface $systemEnvironment)
@@ -62,6 +65,7 @@ final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
 
                 $response           = $requestEnv->getResponse();
 
+                /* @phpstan-ignore-next-line */
                 if ($response instanceof Response) {
                     return $response;
                 }

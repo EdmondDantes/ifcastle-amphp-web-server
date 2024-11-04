@@ -15,11 +15,11 @@
         }
     },
     "require": {
-        "ifcastle/application": "^0.7.3",
-        "ifcastle/service-manager": "^0.5.0",
-        "ifcastle/amphp-engine": "^0.2.0",
+        "ifcastle/application": "^0.7",
+        "ifcastle/service-manager": "^0.6",
+        "ifcastle/amphp-engine": "^0.2",
         "ifcastle/amphp-pool": "^1.0",
-        "ifcastle/protocol-contracts": "^0.5.7"
+        "ifcastle/protocol-contracts": "^0.6"
     },
     "require-dev": {
         "ifcastle/codestyle": "^0.1.1",
