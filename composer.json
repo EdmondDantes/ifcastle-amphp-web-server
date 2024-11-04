@@ -4,6 +4,17 @@
     "type": "ifcastle-application",
     "license": "MIT",
     "keywords": ["engine", "ifcastle", "amphp", "web", "server"],
+    "extra": {
+        "ifcastle-installer": {
+            "package": {
+                "name": "amphp-web-server",
+                "bootloaders": [
+                    "IfCastle\\Configurator\\Configurator"
+                ],
+                "tags": ["amphpWebServer"]
+            }
+        }
+    },
     "autoload": {
         "psr-4": {
             "IfCastle\\AmphpWebServer\\": "src/"

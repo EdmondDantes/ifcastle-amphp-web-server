@@ -3,13 +3,16 @@
 
 declare(strict_types=1);
 
-// load dependencies
+use IfCastle\Application\EngineRolesEnum;
+use IfCastle\Application\Runner;
+use IfCastle\AmphpWebServer\WebServerApplication;
+
 (function () {
     $require = true;
     if (class_exists('Phar')) {
         // Maybe this file is used as phar-stub? Let's try!
         try {
-            Phar::mapPhar('amphp.phar');
+            Phar::mapPhar('ifc.phar');
             
             require_once 'phar://ifc.phar/vendor/autoload.php';
             $require = false;
@@ -35,26 +38,32 @@ declare(strict_types=1);
         
         require_once $file;
     }
-})();
-
-\IfCastle\AmphpWebServer\WebServerApplication::runAndExit((function(): string {
-  
-    $possibleDirs = [__DIR__.'/../../', __DIR__.'/../', __DIR__.'/vendor/'];
     
-    $dir = null;
-    
-    foreach ($possibleDirs as $possibleDir) {
-        if (file_exists($possibleDir.'autoload.php')) {
-            
-            $dir = realpath($possibleDir.'../');
-            
-            break;
+    $getAppDir = function(): string {
+        
+        $possibleDirs = [__DIR__.'/../../', __DIR__.'/../', __DIR__.'/vendor/'];
+        
+        $dir = null;
+        
+        foreach ($possibleDirs as $possibleDir) {
+            if (file_exists($possibleDir.'autoload.php')) {
+                
+                $dir = realpath($possibleDir.'../');
+                
+                break;
+            }
         }
-    }
+        
+        if (null === $dir) {
+            throw new \RuntimeException('Unable to locate autoload.php dir.');
+        }
+        
+        return $dir;
+    };
     
-    if (null === $dir) {
-        throw new \RuntimeException('Unable to locate autoload.php dir.');
-    }
+    $runner = new Runner(
+        $getAppDir(), EngineRolesEnum::SERVER->value, WebServerApplication::class,WebServerApplication::TAGS
+    );
     
-    return $dir;
-})());
+    $runner->runAndExit();
+})();

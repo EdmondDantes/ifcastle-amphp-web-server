@@ -7,6 +7,7 @@ namespace IfCastle\AmphpWebServer;
 use IfCastle\AmpPool\Worker\WorkerEntryPointInterface;
 use IfCastle\AmpPool\Worker\WorkerInterface;
 use IfCastle\Application\Environment\SystemEnvironmentInterface;
+use IfCastle\Application\WorkerPool\WorkerTypeEnum;
 
 final class HttpReactor implements WorkerEntryPointInterface
 {
@@ -36,7 +37,13 @@ final class HttpReactor implements WorkerEntryPointInterface
             throw new \RuntimeException('Application directory not set in pool context');
         }
 
-        HttpReactorApplication::$worker = $this->worker;
-        HttpReactorApplication::run($poolContext[SystemEnvironmentInterface::APPLICATION_DIR]);
+        (new WorkerRunner(
+            $worker,
+            HttpReactorEngine::class,
+            $poolContext[SystemEnvironmentInterface::APPLICATION_DIR],
+            WorkerTypeEnum::REACTOR->value,
+            WebServerApplication::class,
+            [WorkerTypeEnum::REACTOR->value]
+        ))->runAndDispose();
     }
 }
