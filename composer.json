@@ -34,9 +34,16 @@
     },
     "require-dev": {
         "ifcastle/codestyle": "^0.1.1",
-        "phpstan/phpstan": "^1.12"
+        "phpstan/phpstan": "^1.12",
+        "ifcastle/package-installer": "^0.2.0",
+        "ifcastle/configurator-ini": "^0.6.0"
     },
     "bin": [
         "amphp"
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "ifcastle/package-installer": true
+        }
+    }
 }

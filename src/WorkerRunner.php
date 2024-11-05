@@ -12,11 +12,6 @@ use IfCastle\Application\Runner;
 final class WorkerRunner extends Runner
 {
     /**
-     * @param WorkerInterface|null $worker
-     * @param string               $engineClass
-     * @param string               $appDir
-     * @param string               $appType
-     * @param string               $applicationClass
      * @param string[]             $runtimeTags
      */
     public function __construct(

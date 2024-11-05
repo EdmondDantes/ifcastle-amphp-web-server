@@ -20,7 +20,7 @@ class HttpRequestAdapter implements HttpRequestInterface, DisposableInterface
     private HttpRequestForm|null|false $form = false;
 
     public function __construct(private readonly Request $request) {}
-    
+
     #[\Override]
     public function getUri(): PsrUri
     {
@@ -59,11 +59,11 @@ class HttpRequestAdapter implements HttpRequestInterface, DisposableInterface
     public function getCookies(): array
     {
         $result                     = [];
-        
+
         foreach ($this->request->getCookies() as $cookie) {
             $result[$cookie->getName()] = $cookie->getValue();
         }
-        
+
         return $result;
     }
 
@@ -84,13 +84,13 @@ class HttpRequestAdapter implements HttpRequestInterface, DisposableInterface
     {
         return new ReadableStreamAdapter($this->request->getBody());
     }
-    
+
     #[\Override]
     public function getRequestParameters(): array
     {
         return $this->request->getQueryParameters();
     }
-    
+
     #[\Override]
     public function getRequestParameter(string $name): mixed
     {

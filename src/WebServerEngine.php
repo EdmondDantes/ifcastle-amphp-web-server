@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace IfCastle\AmphpWebServer;
 
+use IfCastle\AmpPool\WorkerGroup as AmpWorkerGroup;
 use IfCastle\AmpPool\WorkerPool;
 use IfCastle\AmpPool\WorkerTypeEnum as WorkerPoolTypeEnum;
 use IfCastle\Application\Environment\SystemEnvironmentInterface;
@@ -15,15 +16,16 @@ use IfCastle\Application\WorkerPool\WorkerState;
 use IfCastle\Application\WorkerPool\WorkerStateInterface;
 use IfCastle\Application\WorkerPool\WorkerTypeEnum;
 use IfCastle\DI\ConfigInterface;
+use IfCastle\DI\Dependency;
 use IfCastle\OsUtilities\Safe;
 use Psr\Log\LoggerInterface;
 
 class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolBuilderInterface, WorkerPoolInterface
 {
     /**
-     * @var \IfCastle\AmpPool\WorkerGroupInterface[]
+     * @var AmpWorkerGroup[]
      */
-    protected array $workerGroups = [];
+    protected array $ampWorkerGroups = [];
 
     /**
      * @var \IfCastle\AmpPool\WorkerPool<object, object>|null
@@ -31,10 +33,11 @@ class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolB
     protected WorkerPool|null $workerPool = null;
 
     public function __construct(
-        ConfigInterface $configuration,
-        protected string $applicationDirectory,
-        protected readonly LoggerInterface|null $logger = null)
-    {
+        ConfigInterface                         $configuration,
+        #[Dependency]
+        protected string                        $applicationDir,
+        protected readonly LoggerInterface|null $logger = null
+    ) {
         $this->applyConfiguration($configuration->findSection('server'));
     }
 
@@ -46,14 +49,14 @@ class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolB
         }
 
         // Change directory to the application directory
-        if (\getcwd() !== $this->applicationDirectory && false === Safe::execute(fn() => \chdir($this->applicationDirectory))) {
-            throw new \RuntimeException('Unable to change directory to ' . $this->applicationDirectory);
+        if (\getcwd() !== $this->applicationDir && false === Safe::execute(fn() => \chdir($this->applicationDir))) {
+            throw new \RuntimeException('Unable to change directory to ' . $this->applicationDir);
         }
 
         $this->workerPool       = new WorkerPool(logger: $this->logger);
-        $this->workerPool->setPoolContext([SystemEnvironmentInterface::APPLICATION_DIR => $this->applicationDirectory]);
+        $this->workerPool->setPoolContext([SystemEnvironmentInterface::APPLICATION_DIR => $this->applicationDir]);
 
-        foreach ($this->workerGroups as $group) {
+        foreach ($this->ampWorkerGroups as $group) {
             $this->workerPool->describeGroup($group);
         }
 
@@ -63,7 +66,14 @@ class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolB
     #[\Override]
     public function describeGroup(WorkerGroupInterface $group): void
     {
-        $this->workerGroups[]       = $group;
+        // Convert WorkerGroupInterface to AmpWorkerGroup
+        $this->ampWorkerGroups[] = new AmpWorkerGroup(
+            $group->getEntryPointClass(),
+            $this->appWorkerTypeToWorkerPoolType($group->getWorkerType()),
+            $group->getMinWorkers(),
+            $group->getMaxWorkers(),
+            $group->getGroupName()
+        );
     }
 
     #[\Override]
@@ -150,6 +160,15 @@ class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolB
             WorkerPoolTypeEnum::REACTOR => WorkerTypeEnum::REACTOR,
             WorkerPoolTypeEnum::JOB     => WorkerTypeEnum::JOB,
             WorkerPoolTypeEnum::SERVICE => WorkerTypeEnum::SERVICE,
+        };
+    }
+
+    private function appWorkerTypeToWorkerPoolType(WorkerTypeEnum $workerType): WorkerPoolTypeEnum
+    {
+        return match ($workerType) {
+            WorkerTypeEnum::REACTOR => WorkerPoolTypeEnum::REACTOR,
+            WorkerTypeEnum::JOB     => WorkerPoolTypeEnum::JOB,
+            WorkerTypeEnum::SERVICE => WorkerPoolTypeEnum::SERVICE,
         };
     }
 

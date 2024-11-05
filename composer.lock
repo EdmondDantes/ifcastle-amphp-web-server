@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84b852532c5a67eb8398e2f55c120d3d",
+    "content-hash": "f4030f594fc97d3a0929e8f76dd37f82",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1354,16 +1354,16 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.7.6",
+            "version": "v0.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "eedb8e21b15cb35263e2f28ae37dbb74cc73ec91"
+                "reference": "80d250c83317a952b5de8d44fff0f48024aef8a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/eedb8e21b15cb35263e2f28ae37dbb74cc73ec91",
-                "reference": "eedb8e21b15cb35263e2f28ae37dbb74cc73ec91",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/80d250c83317a952b5de8d44fff0f48024aef8a1",
+                "reference": "80d250c83317a952b5de8d44fff0f48024aef8a1",
                 "shasum": ""
             },
             "require": {
@@ -1400,9 +1400,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.7.6"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.7.7"
             },
-            "time": "2024-11-02T14:36:47+00:00"
+            "time": "2024-11-05T16:41:33+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -1488,16 +1488,16 @@
         },
         {
             "name": "ifcastle/di",
-            "version": "v0.7.1",
+            "version": "v0.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/di.git",
-                "reference": "8d5e3c36f2d51641d3071a0479d0ed794697c89e"
+                "reference": "b10fb04defffc6206236565115c1578956dd523b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/di/zipball/8d5e3c36f2d51641d3071a0479d0ed794697c89e",
-                "reference": "8d5e3c36f2d51641d3071a0479d0ed794697c89e",
+                "url": "https://api.github.com/repos/EdmondDantes/di/zipball/b10fb04defffc6206236565115c1578956dd523b",
+                "reference": "b10fb04defffc6206236565115c1578956dd523b",
                 "shasum": ""
             },
             "require": {
@@ -1536,9 +1536,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/di/issues",
-                "source": "https://github.com/EdmondDantes/di/tree/v0.7.1"
+                "source": "https://github.com/EdmondDantes/di/tree/v0.7.3"
             },
-            "time": "2024-11-01T17:03:46+00:00"
+            "time": "2024-11-05T18:32:05+00:00"
         },
         {
             "name": "ifcastle/exceptions",
@@ -2960,6 +2960,114 @@
             "time": "2024-11-03T16:32:43+00:00"
         },
         {
+            "name": "ifcastle/configurator-ini",
+            "version": "v0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EdmondDantes/configurator-ini.git",
+                "reference": "e97ed38574465eb0d5e673b61dc6709de5d518c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EdmondDantes/configurator-ini/zipball/e97ed38574465eb0d5e673b61dc6709de5d518c4",
+                "reference": "e97ed38574465eb0d5e673b61dc6709de5d518c4",
+                "shasum": ""
+            },
+            "require": {
+                "ifcastle/application": "^0.7",
+                "ifcastle/di": "^0.7",
+                "ifcastle/os-utilities": "^0.5",
+                "ifcastle/service-manager": "^0.6"
+            },
+            "require-dev": {
+                "ifcastle/codestyle": "^0.1.7",
+                "phpstan/phpstan": "^1.12",
+                "phpunit/phpunit": "^11.4"
+            },
+            "type": "ifcastle-component",
+            "extra": {
+                "ifcastle-installer": {
+                    "package": {
+                        "name": "configurator",
+                        "bootloaders": [
+                            "IfCastle\\Configurator\\Configurator"
+                        ]
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "IfCastle\\Configurator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Configurator component.",
+            "keywords": [
+                "configurator",
+                "ifcastle",
+                "ini"
+            ],
+            "support": {
+                "issues": "https://github.com/EdmondDantes/configurator-ini/issues",
+                "source": "https://github.com/EdmondDantes/configurator-ini/tree/v0.6.0"
+            },
+            "time": "2024-11-03T08:49:57+00:00"
+        },
+        {
+            "name": "ifcastle/package-installer",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EdmondDantes/ifcastle-package-installer.git",
+                "reference": "748ed9dec58c7c745a5f8a98f9d45dbf4f22bcf4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-package-installer/zipball/748ed9dec58c7c745a5f8a98f9d45dbf4f22bcf4",
+                "reference": "748ed9dec58c7c745a5f8a98f9d45dbf4f22bcf4",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0",
+                "ifcastle/application": "^0.7"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "ifcastle/codestyle": "^0.1",
+                "phpstan/phpstan": "^1.12",
+                "phpunit/phpunit": "^11.4"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "IfCastle\\PackageInstaller\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "IfCastle\\PackageInstaller\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Composer plugin for install IfCastle components.",
+            "keywords": [
+                "composer",
+                "ifcastle",
+                "installer",
+                "package",
+                "plugin"
+            ],
+            "support": {
+                "issues": "https://github.com/EdmondDantes/ifcastle-package-installer/issues",
+                "source": "https://github.com/EdmondDantes/ifcastle-package-installer/tree/v0.2.0"
+            },
+            "time": "2024-11-03T10:28:05+00:00"
+        },
+        {
             "name": "phpstan/phpstan",
             "version": "1.12.7",
             "source": {
@@ -3652,16 +3760,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "1.2.8",
+            "version": "1.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "05755bf43617449c08ee8e50fb840c85ad3b1240"
+                "reference": "7923bd5e48f8c26a922df91f7174f5bca2b3671d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/05755bf43617449c08ee8e50fb840c85ad3b1240",
-                "reference": "05755bf43617449c08ee8e50fb840c85ad3b1240",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/7923bd5e48f8c26a922df91f7174f5bca2b3671d",
+                "reference": "7923bd5e48f8c26a922df91f7174f5bca2b3671d",
                 "shasum": ""
             },
             "require": {
@@ -3699,7 +3807,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/1.2.8"
+                "source": "https://github.com/rectorphp/rector/tree/1.2.9"
             },
             "funding": [
                 {
@@ -3707,7 +3815,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-18T11:54:27+00:00"
+            "time": "2024-11-04T18:26:57+00:00"
         },
         {
             "name": "sebastian/diff",

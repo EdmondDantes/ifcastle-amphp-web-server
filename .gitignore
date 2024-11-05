@@ -1,2 +1,5 @@
 /vendor/
 /.php_cs.cache
+/main.ini
+/bootloader/configurator.ini
+/bootloader/

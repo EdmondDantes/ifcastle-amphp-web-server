@@ -63,7 +63,7 @@ final class HttpBodyParser
         if ($this->requestFiles !== null) {
             return;
         }
-        
+
         /* @phpstan-ignore-next-line */
         $this->fieldCountLimit      ??= (int) \ini_get('max_input_vars') ?? 1000;
 
