@@ -11,7 +11,7 @@ use IfCastle\Application\EngineRolesEnum;
 
 class WebServerApplication extends ApplicationAbstract
 {
-    public const array TAGS = ['amphpWebServer'];
+    public const array TAGS         = ['amphp', 'webServer', 'amphpWebServer'];
 
     #[\Override]
     protected function defineEngine(): EngineInterface|null
