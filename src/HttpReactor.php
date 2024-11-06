@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace IfCastle\AmphpWebServer;
 
+use IfCastle\AmpPool\Exceptions\FatalWorkerException;
 use IfCastle\AmpPool\Worker\WorkerEntryPointInterface;
 use IfCastle\AmpPool\Worker\WorkerInterface;
 use IfCastle\Application\Environment\SystemEnvironmentInterface;
@@ -34,7 +35,7 @@ final class HttpReactor implements WorkerEntryPointInterface
         $poolContext                = $worker->getPoolContext();
 
         if (empty($poolContext[SystemEnvironmentInterface::APPLICATION_DIR])) {
-            throw new \RuntimeException('Application directory not set in pool context');
+            throw new FatalWorkerException('Application directory not set in pool context');
         }
 
         (new WorkerRunner(

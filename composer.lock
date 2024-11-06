@@ -1354,16 +1354,16 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.7.7",
+            "version": "v0.7.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "80d250c83317a952b5de8d44fff0f48024aef8a1"
+                "reference": "7d43e12127264552824d8c20dca2027900d9d278"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/80d250c83317a952b5de8d44fff0f48024aef8a1",
-                "reference": "80d250c83317a952b5de8d44fff0f48024aef8a1",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/7d43e12127264552824d8c20dca2027900d9d278",
+                "reference": "7d43e12127264552824d8c20dca2027900d9d278",
                 "shasum": ""
             },
             "require": {
@@ -1400,9 +1400,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.7.7"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.7.8"
             },
-            "time": "2024-11-05T16:41:33+00:00"
+            "time": "2024-11-05T19:00:57+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -1488,16 +1488,16 @@
         },
         {
             "name": "ifcastle/di",
-            "version": "v0.7.3",
+            "version": "v0.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/di.git",
-                "reference": "b10fb04defffc6206236565115c1578956dd523b"
+                "reference": "a850900a31410ea28badea294d877bf6c70248ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/di/zipball/b10fb04defffc6206236565115c1578956dd523b",
-                "reference": "b10fb04defffc6206236565115c1578956dd523b",
+                "url": "https://api.github.com/repos/EdmondDantes/di/zipball/a850900a31410ea28badea294d877bf6c70248ad",
+                "reference": "a850900a31410ea28badea294d877bf6c70248ad",
                 "shasum": ""
             },
             "require": {
@@ -1536,9 +1536,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/di/issues",
-                "source": "https://github.com/EdmondDantes/di/tree/v0.7.3"
+                "source": "https://github.com/EdmondDantes/di/tree/v0.7.4"
             },
-            "time": "2024-11-05T18:32:05+00:00"
+            "time": "2024-11-06T06:20:40+00:00"
         },
         {
             "name": "ifcastle/exceptions",

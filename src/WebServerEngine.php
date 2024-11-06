@@ -187,20 +187,24 @@ class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolB
         $reactors                   = (int) $reactors;
         $jobs                       = (int) $jobs;
 
-        $this->describeGroup(new WorkerGroup(
-            HttpReactor::class,
-            WorkerTypeEnum::REACTOR,
-            $reactors,
-            0,
-            'Reactors'
-        ));
+        if ($reactors > 0) {
+            $this->describeGroup(new WorkerGroup(
+                HttpReactor::class,
+                WorkerTypeEnum::REACTOR,
+                $reactors,
+                0,
+                'Reactors'
+            ));
+        }
 
-        $this->describeGroup(new WorkerGroup(
-            JobWorker::class,
-            WorkerTypeEnum::JOB,
-            $jobs,
-            0,
-            'Jobs'
-        ));
+        if ($jobs > 0) {
+            $this->describeGroup(new WorkerGroup(
+                JobWorker::class,
+                WorkerTypeEnum::JOB,
+                $jobs,
+                0,
+                'Jobs'
+            ));
+        }
     }
 }
