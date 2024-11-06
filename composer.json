@@ -36,7 +36,8 @@
         "ifcastle/codestyle": "^0.1.1",
         "phpstan/phpstan": "^1.12",
         "ifcastle/package-installer": "^0.2.0",
-        "ifcastle/configurator-ini": "^0.6.0"
+        "ifcastle/configurator-ini": "^0.6.0",
+        "ifcastle/rest-api": "^0.5.2"
     },
     "bin": [
         "amphp"

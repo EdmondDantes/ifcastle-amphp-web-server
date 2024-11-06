@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4030f594fc97d3a0929e8f76dd37f82",
+    "content-hash": "9755759266e90fd7ca6343a00a2b1196",
     "packages": [
         {
             "name": "amphp/amp",
@@ -3068,6 +3068,62 @@
             "time": "2024-11-03T10:28:05+00:00"
         },
         {
+            "name": "ifcastle/rest-api",
+            "version": "v0.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EdmondDantes/rest-api.git",
+                "reference": "0f802c3119662861b38f0b490c08c702561f597d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EdmondDantes/rest-api/zipball/0f802c3119662861b38f0b490c08c702561f597d",
+                "reference": "0f802c3119662861b38f0b490c08c702561f597d",
+                "shasum": ""
+            },
+            "require": {
+                "ifcastle/application": "^0.7",
+                "ifcastle/protocol-contracts": "^0.6",
+                "symfony/routing": "^7.1"
+            },
+            "require-dev": {
+                "ifcastle/codestyle": "^0.1",
+                "phpstan/phpstan": "^1.12",
+                "phpunit/phpunit": "^11.3"
+            },
+            "type": "ifcastle-api",
+            "extra": {
+                "ifcastle-installer": {
+                    "package": {
+                        "name": "rest_api",
+                        "bootloaders": [
+                            "IfCastle\\RestApi\\Bootloader"
+                        ]
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "IfCastle\\RestApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Rest api layer.",
+            "keywords": [
+                "api",
+                "ifcastle",
+                "rest"
+            ],
+            "support": {
+                "issues": "https://github.com/EdmondDantes/rest-api/issues",
+                "source": "https://github.com/EdmondDantes/rest-api/tree/v0.5.2"
+            },
+            "time": "2024-11-06T12:27:43+00:00"
+        },
+        {
             "name": "phpstan/phpstan",
             "version": "1.12.7",
             "source": {
@@ -4931,6 +4987,87 @@
                 }
             ],
             "time": "2024-11-06T09:25:12+00:00"
+        },
+        {
+            "name": "symfony/routing",
+            "version": "v7.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/routing.git",
+                "reference": "66a2c469f6c22d08603235c46a20007c0701ea0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/66a2c469f6c22d08603235c46a20007c0701ea0a",
+                "reference": "66a2c469f6c22d08603235c46a20007c0701ea0a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3"
+            },
+            "conflict": {
+                "symfony/config": "<6.4",
+                "symfony/dependency-injection": "<6.4",
+                "symfony/yaml": "<6.4"
+            },
+            "require-dev": {
+                "psr/log": "^1|^2|^3",
+                "symfony/config": "^6.4|^7.0",
+                "symfony/dependency-injection": "^6.4|^7.0",
+                "symfony/expression-language": "^6.4|^7.0",
+                "symfony/http-foundation": "^6.4|^7.0",
+                "symfony/yaml": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Routing\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Maps an HTTP request to a set of configuration variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "router",
+                "routing",
+                "uri",
+                "url"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/routing/tree/v7.1.6"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-10-01T08:31:23+00:00"
         },
         {
             "name": "symfony/service-contracts",
