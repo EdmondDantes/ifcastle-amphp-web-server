@@ -71,7 +71,6 @@ final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
                 }
 
                 throw new UnexpectedValueType('response', $response, Response::class);
-
             }),
             new DefaultErrorHandler(),
         );

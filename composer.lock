@@ -1354,16 +1354,16 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.7.8",
+            "version": "v0.7.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "7d43e12127264552824d8c20dca2027900d9d278"
+                "reference": "4fc45f9a4d8a90e0d7b7640ddec5ad928d839941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/7d43e12127264552824d8c20dca2027900d9d278",
-                "reference": "7d43e12127264552824d8c20dca2027900d9d278",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/4fc45f9a4d8a90e0d7b7640ddec5ad928d839941",
+                "reference": "4fc45f9a4d8a90e0d7b7640ddec5ad928d839941",
                 "shasum": ""
             },
             "require": {
@@ -1400,9 +1400,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.7.8"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.7.11"
             },
-            "time": "2024-11-05T19:00:57+00:00"
+            "time": "2024-11-06T11:34:39+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -1441,16 +1441,16 @@
         },
         {
             "name": "ifcastle/design-patterns",
-            "version": "v0.3.1",
+            "version": "v0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/design-patterns.git",
-                "reference": "ba559607c114456143652dbefe336d3bee7d944b"
+                "reference": "6d99cd8c4b56d439b03774b4b3a3854ddde54671"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/ba559607c114456143652dbefe336d3bee7d944b",
-                "reference": "ba559607c114456143652dbefe336d3bee7d944b",
+                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/6d99cd8c4b56d439b03774b4b3a3854ddde54671",
+                "reference": "6d99cd8c4b56d439b03774b4b3a3854ddde54671",
                 "shasum": ""
             },
             "require": {
@@ -1482,22 +1482,22 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/design-patterns/issues",
-                "source": "https://github.com/EdmondDantes/design-patterns/tree/v0.3.1"
+                "source": "https://github.com/EdmondDantes/design-patterns/tree/v0.3.2"
             },
-            "time": "2024-11-02T08:19:28+00:00"
+            "time": "2024-11-06T11:52:43+00:00"
         },
         {
             "name": "ifcastle/di",
-            "version": "v0.7.4",
+            "version": "v0.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/di.git",
-                "reference": "a850900a31410ea28badea294d877bf6c70248ad"
+                "reference": "b08509840e06e0c5441b950293881c6d5ca29f50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/di/zipball/a850900a31410ea28badea294d877bf6c70248ad",
-                "reference": "a850900a31410ea28badea294d877bf6c70248ad",
+                "url": "https://api.github.com/repos/EdmondDantes/di/zipball/b08509840e06e0c5441b950293881c6d5ca29f50",
+                "reference": "b08509840e06e0c5441b950293881c6d5ca29f50",
                 "shasum": ""
             },
             "require": {
@@ -1536,9 +1536,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/di/issues",
-                "source": "https://github.com/EdmondDantes/di/tree/v0.7.4"
+                "source": "https://github.com/EdmondDantes/di/tree/v0.7.5"
             },
-            "time": "2024-11-06T06:20:40+00:00"
+            "time": "2024-11-06T10:07:34+00:00"
         },
         {
             "name": "ifcastle/exceptions",
@@ -3886,16 +3886,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v7.1.6",
+            "version": "v7.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "bb5192af6edc797cbab5c8e8ecfea2fe5f421e57"
+                "reference": "3284aafcac338b6e86fd955ee4d794cbe434151a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/bb5192af6edc797cbab5c8e8ecfea2fe5f421e57",
-                "reference": "bb5192af6edc797cbab5c8e8ecfea2fe5f421e57",
+                "url": "https://api.github.com/repos/symfony/console/zipball/3284aafcac338b6e86fd955ee4d794cbe434151a",
+                "reference": "3284aafcac338b6e86fd955ee4d794cbe434151a",
                 "shasum": ""
             },
             "require": {
@@ -3959,7 +3959,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v7.1.6"
+                "source": "https://github.com/symfony/console/tree/v7.1.7"
             },
             "funding": [
                 {
@@ -3975,7 +3975,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-10-09T08:46:59+00:00"
+            "time": "2024-11-05T15:34:55+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -4873,16 +4873,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v7.1.6",
+            "version": "v7.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "6aaa189ddb4ff6b5de8fa3210f2fb42c87b4d12e"
+                "reference": "9b8a40b7289767aa7117e957573c2a535efe6585"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/6aaa189ddb4ff6b5de8fa3210f2fb42c87b4d12e",
-                "reference": "6aaa189ddb4ff6b5de8fa3210f2fb42c87b4d12e",
+                "url": "https://api.github.com/repos/symfony/process/zipball/9b8a40b7289767aa7117e957573c2a535efe6585",
+                "reference": "9b8a40b7289767aa7117e957573c2a535efe6585",
                 "shasum": ""
             },
             "require": {
@@ -4914,7 +4914,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v7.1.6"
+                "source": "https://github.com/symfony/process/tree/v7.1.7"
             },
             "funding": [
                 {
@@ -4930,7 +4930,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:20:29+00:00"
+            "time": "2024-11-06T09:25:12+00:00"
         },
         {
             "name": "symfony/service-contracts",
