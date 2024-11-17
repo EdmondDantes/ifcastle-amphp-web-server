@@ -1354,16 +1354,16 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.7.12",
+            "version": "v0.7.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "606275a7bbd8652e49645cf449801c4810f387a9"
+                "reference": "8f321848a45a893e65be57d6da95d077e79e2bc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/606275a7bbd8652e49645cf449801c4810f387a9",
-                "reference": "606275a7bbd8652e49645cf449801c4810f387a9",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/8f321848a45a893e65be57d6da95d077e79e2bc1",
+                "reference": "8f321848a45a893e65be57d6da95d077e79e2bc1",
                 "shasum": ""
             },
             "require": {
@@ -1374,6 +1374,7 @@
                 "ifcastle/os-utilities": "^0.5.0",
                 "ifcastle/protocol-contracts": "^0.6",
                 "ifcastle/service-manager": "^0.6.5",
+                "league/uri": "^7.4",
                 "psr/log": "^3.0"
             },
             "require-dev": {
@@ -1400,9 +1401,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.7.12"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.7.14"
             },
-            "time": "2024-11-06T15:34:04+00:00"
+            "time": "2024-11-17T11:44:47+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -1441,16 +1442,16 @@
         },
         {
             "name": "ifcastle/design-patterns",
-            "version": "v0.3.2",
+            "version": "v0.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/design-patterns.git",
-                "reference": "6d99cd8c4b56d439b03774b4b3a3854ddde54671"
+                "reference": "ac9991fed440473282f03190f4e2ec83f8f5669d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/6d99cd8c4b56d439b03774b4b3a3854ddde54671",
-                "reference": "6d99cd8c4b56d439b03774b4b3a3854ddde54671",
+                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/ac9991fed440473282f03190f4e2ec83f8f5669d",
+                "reference": "ac9991fed440473282f03190f4e2ec83f8f5669d",
                 "shasum": ""
             },
             "require": {
@@ -1482,9 +1483,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/design-patterns/issues",
-                "source": "https://github.com/EdmondDantes/design-patterns/tree/v0.3.2"
+                "source": "https://github.com/EdmondDantes/design-patterns/tree/v0.3.7"
             },
-            "time": "2024-11-06T11:52:43+00:00"
+            "time": "2024-11-13T16:20:06+00:00"
         },
         {
             "name": "ifcastle/di",
@@ -1542,16 +1543,16 @@
         },
         {
             "name": "ifcastle/exceptions",
-            "version": "v5.1.3",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/BaseException.git",
-                "reference": "93b1dcb7b61e0610e3d6e41bdf963a889fad4e2a"
+                "reference": "3637dcf4536969f1ffe4042838026093e5c40aee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/BaseException/zipball/93b1dcb7b61e0610e3d6e41bdf963a889fad4e2a",
-                "reference": "93b1dcb7b61e0610e3d6e41bdf963a889fad4e2a",
+                "url": "https://api.github.com/repos/EdmondDantes/BaseException/zipball/3637dcf4536969f1ffe4042838026093e5c40aee",
+                "reference": "3637dcf4536969f1ffe4042838026093e5c40aee",
                 "shasum": ""
             },
             "require": {
@@ -1583,9 +1584,9 @@
             "description": "A basic library for exceptions with templates, oriented towards usage in web services",
             "support": {
                 "issues": "https://github.com/EdmondDantes/BaseException/issues",
-                "source": "https://github.com/EdmondDantes/BaseException/tree/v5.1.3"
+                "source": "https://github.com/EdmondDantes/BaseException/tree/v5.2.1"
             },
-            "time": "2024-10-29T06:51:30+00:00"
+            "time": "2024-11-15T15:45:10+00:00"
         },
         {
             "name": "ifcastle/os-utilities",
@@ -1632,16 +1633,16 @@
         },
         {
             "name": "ifcastle/protocol-contracts",
-            "version": "v0.6.0",
+            "version": "v0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/protocol-contracts.git",
-                "reference": "c599555d5fc38921cf454f0ac57600d021782975"
+                "reference": "eebb12fb59b62882b8d6ac13480c733f4e1cab86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/protocol-contracts/zipball/c599555d5fc38921cf454f0ac57600d021782975",
-                "reference": "c599555d5fc38921cf454f0ac57600d021782975",
+                "url": "https://api.github.com/repos/EdmondDantes/protocol-contracts/zipball/eebb12fb59b62882b8d6ac13480c733f4e1cab86",
+                "reference": "eebb12fb59b62882b8d6ac13480c733f4e1cab86",
                 "shasum": ""
             },
             "require": {
@@ -1649,6 +1650,7 @@
                 "ifcastle/design-patterns": "^0.3",
                 "ifcastle/di": "^0.7",
                 "ifcastle/exceptions": "^5.0",
+                "league/uri-interfaces": "^7.4",
                 "psr/http-message": "^2.0"
             },
             "require-dev": {
@@ -1672,22 +1674,22 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/protocol-contracts/issues",
-                "source": "https://github.com/EdmondDantes/protocol-contracts/tree/v0.6.0"
+                "source": "https://github.com/EdmondDantes/protocol-contracts/tree/v0.6.3"
             },
-            "time": "2024-11-02T14:23:55+00:00"
+            "time": "2024-11-17T10:22:48+00:00"
         },
         {
             "name": "ifcastle/service-manager",
-            "version": "v0.6.9",
+            "version": "v0.6.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/service-manager.git",
-                "reference": "7d01cb2a684f7218184afba8d70695662f66dce6"
+                "reference": "4f56c6c110f1c5665468bcb1d62a9ab2bc56596d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/service-manager/zipball/7d01cb2a684f7218184afba8d70695662f66dce6",
-                "reference": "7d01cb2a684f7218184afba8d70695662f66dce6",
+                "url": "https://api.github.com/repos/EdmondDantes/service-manager/zipball/4f56c6c110f1c5665468bcb1d62a9ab2bc56596d",
+                "reference": "4f56c6c110f1c5665468bcb1d62a9ab2bc56596d",
                 "shasum": ""
             },
             "require": {
@@ -1719,26 +1721,26 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/service-manager/issues",
-                "source": "https://github.com/EdmondDantes/service-manager/tree/v0.6.9"
+                "source": "https://github.com/EdmondDantes/service-manager/tree/v0.6.10"
             },
-            "time": "2024-11-06T12:13:39+00:00"
+            "time": "2024-11-08T12:30:20+00:00"
         },
         {
             "name": "ifcastle/type-definitions",
-            "version": "v0.5.17",
+            "version": "v0.5.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/type-definitions.git",
-                "reference": "fc5671292421b4c09f2238de53034d7aeb0f9e2d"
+                "reference": "ca6f9cdfb63ddaf6f11e3f7961adc9664080386b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/type-definitions/zipball/fc5671292421b4c09f2238de53034d7aeb0f9e2d",
-                "reference": "fc5671292421b4c09f2238de53034d7aeb0f9e2d",
+                "url": "https://api.github.com/repos/EdmondDantes/type-definitions/zipball/ca6f9cdfb63ddaf6f11e3f7961adc9664080386b",
+                "reference": "ca6f9cdfb63ddaf6f11e3f7961adc9664080386b",
                 "shasum": ""
             },
             "require": {
-                "ifcastle/exceptions": "^5.0"
+                "ifcastle/exceptions": "^5.2"
             },
             "require-dev": {
                 "ifcastle/codestyle": "^0.1.7",
@@ -1766,9 +1768,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/type-definitions/issues",
-                "source": "https://github.com/EdmondDantes/type-definitions/tree/v0.5.17"
+                "source": "https://github.com/EdmondDantes/type-definitions/tree/v0.5.20"
             },
-            "time": "2024-10-31T19:52:17+00:00"
+            "time": "2024-11-15T18:11:23+00:00"
         },
         {
             "name": "kelunik/certificate",
@@ -2086,16 +2088,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "3.7.0",
+            "version": "3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "f4393b648b78a5408747de94fca38beb5f7e9ef8"
+                "reference": "32e515fdc02cdafbe4593e30a9350d486b125b67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f4393b648b78a5408747de94fca38beb5f7e9ef8",
-                "reference": "f4393b648b78a5408747de94fca38beb5f7e9ef8",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/32e515fdc02cdafbe4593e30a9350d486b125b67",
+                "reference": "32e515fdc02cdafbe4593e30a9350d486b125b67",
                 "shasum": ""
             },
             "require": {
@@ -2115,12 +2117,14 @@
                 "guzzlehttp/psr7": "^2.2",
                 "mongodb/mongodb": "^1.8",
                 "php-amqplib/php-amqplib": "~2.4 || ^3",
-                "phpstan/phpstan": "^1.9",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.4",
-                "phpunit/phpunit": "^10.5.17",
+                "php-console/php-console": "^3.1.8",
+                "phpstan/phpstan": "^2",
+                "phpstan/phpstan-deprecation-rules": "^2",
+                "phpstan/phpstan-strict-rules": "^2",
+                "phpunit/phpunit": "^10.5.17 || ^11.0.7",
                 "predis/predis": "^1.1 || ^2",
-                "ruflin/elastica": "^7",
+                "rollbar/rollbar": "^4.0",
+                "ruflin/elastica": "^7 || ^8",
                 "symfony/mailer": "^5.4 || ^6",
                 "symfony/mime": "^5.4 || ^6"
             },
@@ -2171,7 +2175,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/3.7.0"
+                "source": "https://github.com/Seldaek/monolog/tree/3.8.0"
             },
             "funding": [
                 {
@@ -2183,7 +2187,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-28T09:40:51+00:00"
+            "time": "2024-11-12T13:57:08+00:00"
         },
         {
             "name": "psr/http-factory",
@@ -2483,16 +2487,16 @@
         },
         {
             "name": "composer/pcre",
-            "version": "3.3.1",
+            "version": "3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/pcre.git",
-                "reference": "63aaeac21d7e775ff9bc9d45021e1745c97521c4"
+                "reference": "b2bed4734f0cc156ee1fe9c0da2550420d99a21e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/pcre/zipball/63aaeac21d7e775ff9bc9d45021e1745c97521c4",
-                "reference": "63aaeac21d7e775ff9bc9d45021e1745c97521c4",
+                "url": "https://api.github.com/repos/composer/pcre/zipball/b2bed4734f0cc156ee1fe9c0da2550420d99a21e",
+                "reference": "b2bed4734f0cc156ee1fe9c0da2550420d99a21e",
                 "shasum": ""
             },
             "require": {
@@ -2502,8 +2506,8 @@
                 "phpstan/phpstan": "<1.11.10"
             },
             "require-dev": {
-                "phpstan/phpstan": "^1.11.10",
-                "phpstan/phpstan-strict-rules": "^1.1",
+                "phpstan/phpstan": "^1.12 || ^2",
+                "phpstan/phpstan-strict-rules": "^1 || ^2",
                 "phpunit/phpunit": "^8 || ^9"
             },
             "type": "library",
@@ -2542,7 +2546,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/pcre/issues",
-                "source": "https://github.com/composer/pcre/tree/3.3.1"
+                "source": "https://github.com/composer/pcre/tree/3.3.2"
             },
             "funding": [
                 {
@@ -2558,7 +2562,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-08-27T18:44:43+00:00"
+            "time": "2024-11-12T16:29:46+00:00"
         },
         {
             "name": "composer/semver",
@@ -3125,16 +3129,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.7",
+            "version": "1.12.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "dc2b9976bd8b0f84ec9b0e50cc35378551de7af0"
+                "reference": "fc463b5d0fe906dcf19689be692c65c50406a071"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/dc2b9976bd8b0f84ec9b0e50cc35378551de7af0",
-                "reference": "dc2b9976bd8b0f84ec9b0e50cc35378551de7af0",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/fc463b5d0fe906dcf19689be692c65c50406a071",
+                "reference": "fc463b5d0fe906dcf19689be692c65c50406a071",
                 "shasum": ""
             },
             "require": {
@@ -3179,7 +3183,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-18T11:12:07+00:00"
+            "time": "2024-11-11T15:37:09+00:00"
         },
         {
             "name": "psr/container",
@@ -3816,16 +3820,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "1.2.9",
+            "version": "1.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "7923bd5e48f8c26a922df91f7174f5bca2b3671d"
+                "reference": "40f9cf38c05296bd32f444121336a521a293fa61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/7923bd5e48f8c26a922df91f7174f5bca2b3671d",
-                "reference": "7923bd5e48f8c26a922df91f7174f5bca2b3671d",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/40f9cf38c05296bd32f444121336a521a293fa61",
+                "reference": "40f9cf38c05296bd32f444121336a521a293fa61",
                 "shasum": ""
             },
             "require": {
@@ -3863,7 +3867,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/1.2.9"
+                "source": "https://github.com/rectorphp/rector/tree/1.2.10"
             },
             "funding": [
                 {
@@ -3871,7 +3875,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-04T18:26:57+00:00"
+            "time": "2024-11-08T13:59:10+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -3942,16 +3946,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v7.1.7",
+            "version": "v7.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "3284aafcac338b6e86fd955ee4d794cbe434151a"
+                "reference": "ff04e5b5ba043d2badfb308197b9e6b42883fcd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/3284aafcac338b6e86fd955ee4d794cbe434151a",
-                "reference": "3284aafcac338b6e86fd955ee4d794cbe434151a",
+                "url": "https://api.github.com/repos/symfony/console/zipball/ff04e5b5ba043d2badfb308197b9e6b42883fcd5",
+                "reference": "ff04e5b5ba043d2badfb308197b9e6b42883fcd5",
                 "shasum": ""
             },
             "require": {
@@ -4015,7 +4019,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v7.1.7"
+                "source": "https://github.com/symfony/console/tree/v7.1.8"
             },
             "funding": [
                 {
@@ -4031,7 +4035,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-05T15:34:55+00:00"
+            "time": "2024-11-06T14:23:19+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -4929,16 +4933,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v7.1.7",
+            "version": "v7.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "9b8a40b7289767aa7117e957573c2a535efe6585"
+                "reference": "42783370fda6e538771f7c7a36e9fa2ee3a84892"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/9b8a40b7289767aa7117e957573c2a535efe6585",
-                "reference": "9b8a40b7289767aa7117e957573c2a535efe6585",
+                "url": "https://api.github.com/repos/symfony/process/zipball/42783370fda6e538771f7c7a36e9fa2ee3a84892",
+                "reference": "42783370fda6e538771f7c7a36e9fa2ee3a84892",
                 "shasum": ""
             },
             "require": {
@@ -4970,7 +4974,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v7.1.7"
+                "source": "https://github.com/symfony/process/tree/v7.1.8"
             },
             "funding": [
                 {
@@ -4986,7 +4990,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-06T09:25:12+00:00"
+            "time": "2024-11-06T14:23:19+00:00"
         },
         {
             "name": "symfony/routing",
@@ -5216,16 +5220,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v7.1.6",
+            "version": "v7.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "61b72d66bf96c360a727ae6232df5ac83c71f626"
+                "reference": "591ebd41565f356fcd8b090fe64dbb5878f50281"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/61b72d66bf96c360a727ae6232df5ac83c71f626",
-                "reference": "61b72d66bf96c360a727ae6232df5ac83c71f626",
+                "url": "https://api.github.com/repos/symfony/string/zipball/591ebd41565f356fcd8b090fe64dbb5878f50281",
+                "reference": "591ebd41565f356fcd8b090fe64dbb5878f50281",
                 "shasum": ""
             },
             "require": {
@@ -5283,7 +5287,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v7.1.6"
+                "source": "https://github.com/symfony/string/tree/v7.1.8"
             },
             "funding": [
                 {
@@ -5299,7 +5303,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:20:29+00:00"
+            "time": "2024-11-13T13:31:21+00:00"
         }
     ],
     "aliases": [],
