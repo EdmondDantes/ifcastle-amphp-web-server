@@ -1354,16 +1354,16 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.7.14",
+            "version": "v0.7.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "8f321848a45a893e65be57d6da95d077e79e2bc1"
+                "reference": "4051648f91a0cbb3467b0c649b395131d271ea93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/8f321848a45a893e65be57d6da95d077e79e2bc1",
-                "reference": "8f321848a45a893e65be57d6da95d077e79e2bc1",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/4051648f91a0cbb3467b0c649b395131d271ea93",
+                "reference": "4051648f91a0cbb3467b0c649b395131d271ea93",
                 "shasum": ""
             },
             "require": {
@@ -1401,9 +1401,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.7.14"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.7.16"
             },
-            "time": "2024-11-17T11:44:47+00:00"
+            "time": "2024-11-17T14:25:34+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -3129,16 +3129,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.10",
+            "version": "1.12.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "fc463b5d0fe906dcf19689be692c65c50406a071"
+                "reference": "0d1fc20a962a91be578bcfe7cf939e6e1a2ff733"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/fc463b5d0fe906dcf19689be692c65c50406a071",
-                "reference": "fc463b5d0fe906dcf19689be692c65c50406a071",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0d1fc20a962a91be578bcfe7cf939e6e1a2ff733",
+                "reference": "0d1fc20a962a91be578bcfe7cf939e6e1a2ff733",
                 "shasum": ""
             },
             "require": {
@@ -3183,7 +3183,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-11T15:37:09+00:00"
+            "time": "2024-11-17T14:08:01+00:00"
         },
         {
             "name": "psr/container",

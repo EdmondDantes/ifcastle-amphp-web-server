@@ -199,7 +199,7 @@ class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolB
 
         if ($jobs > 0) {
 
-            if (false === \interface_exists(\IfCastle\ServiceManager\ExecutorInterface::class)) {
+            if (false === \interface_exists('IfCastle\ServiceManager\ExecutorInterface')) {
                 throw new \RuntimeException('Job-Worker is not available'
                                             . ' because the service manager is not installed! '
                                             . 'The IfCastle\ServiceManager\ExecutorInterface interface is not available. '
