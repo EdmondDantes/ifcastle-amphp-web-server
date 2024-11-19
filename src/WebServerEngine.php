@@ -61,19 +61,19 @@ class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolB
         }
 
         $helloMessage               = 'IFCastle AMPHP Web Server';
-        
+
         // Check JIT support
-        if(function_exists('opcache_get_status')) {
+        if (\function_exists('opcache_get_status')) {
             $opcacheStatus          = opcache_get_status(false);
             $jitStatus              = $opcacheStatus['jit'] ?? false;
-            
-            if($jitStatus) {
+
+            if ($jitStatus) {
                 $helloMessage       .= ' with JIT';
             }
         }
-        
+
         $this->logger->info($helloMessage, [ConsoleLoggerInterface::IN_FRAME => true, ConsoleLoggerInterface::VERSION => '1.0.0']);
-        
+
         $this->workerPool->run();
     }
 

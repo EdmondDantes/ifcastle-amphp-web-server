@@ -28,7 +28,7 @@ final class JobWorker implements WorkerEntryPointInterface, JobHandlerInterface
      * @var \WeakReference<ExecutorInterface>|null
      */
     private ?\WeakReference $executor = null;
-    
+
     /**
      * @var \WeakReference<WorkerProtocolInterface>|null
      */
