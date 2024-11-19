@@ -1280,16 +1280,16 @@
         },
         {
             "name": "ifcastle/amphp-pool",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/amphp-pool.git",
-                "reference": "7cff92eb862b7efa0b1b6009bc9be1f377335941"
+                "reference": "125dbf988fd21c6484075669e4f20136f062024c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/amphp-pool/zipball/7cff92eb862b7efa0b1b6009bc9be1f377335941",
-                "reference": "7cff92eb862b7efa0b1b6009bc9be1f377335941",
+                "url": "https://api.github.com/repos/EdmondDantes/amphp-pool/zipball/125dbf988fd21c6484075669e4f20136f062024c",
+                "reference": "125dbf988fd21c6484075669e4f20136f062024c",
                 "shasum": ""
             },
             "require": {
@@ -1348,22 +1348,22 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/amphp-pool/issues",
-                "source": "https://github.com/EdmondDantes/amphp-pool/tree/v1.0.1"
+                "source": "https://github.com/EdmondDantes/amphp-pool/tree/v1.0.2"
             },
-            "time": "2024-10-13T08:51:38+00:00"
+            "time": "2024-11-19T09:20:44+00:00"
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.7.17",
+            "version": "v0.7.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "6133a7cd152db73149cd06c358e1f22a92e8ee82"
+                "reference": "982b34a25be2689e2324d9a92b82489a15d02c33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/6133a7cd152db73149cd06c358e1f22a92e8ee82",
-                "reference": "6133a7cd152db73149cd06c358e1f22a92e8ee82",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/982b34a25be2689e2324d9a92b82489a15d02c33",
+                "reference": "982b34a25be2689e2324d9a92b82489a15d02c33",
                 "shasum": ""
             },
             "require": {
@@ -1402,9 +1402,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.7.17"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.7.18"
             },
-            "time": "2024-11-18T09:59:58+00:00"
+            "time": "2024-11-19T09:13:30+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
