@@ -1354,16 +1354,16 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.7.16",
+            "version": "v0.7.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "4051648f91a0cbb3467b0c649b395131d271ea93"
+                "reference": "6133a7cd152db73149cd06c358e1f22a92e8ee82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/4051648f91a0cbb3467b0c649b395131d271ea93",
-                "reference": "4051648f91a0cbb3467b0c649b395131d271ea93",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/6133a7cd152db73149cd06c358e1f22a92e8ee82",
+                "reference": "6133a7cd152db73149cd06c358e1f22a92e8ee82",
                 "shasum": ""
             },
             "require": {
@@ -1381,7 +1381,8 @@
                 "friendsofphp/php-cs-fixer": "^3.60",
                 "ifcastle/codestyle": "^0.1.5",
                 "phpstan/phpstan": "^1.12",
-                "phpunit/phpunit": "^11.3"
+                "phpunit/phpunit": "^11.3",
+                "symfony/console": "^7.1"
             },
             "type": "library",
             "autoload": {
@@ -1401,9 +1402,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.7.16"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.7.17"
             },
-            "time": "2024-11-17T14:25:34+00:00"
+            "time": "2024-11-18T09:59:58+00:00"
         },
         {
             "name": "ifcastle/async-contracts",

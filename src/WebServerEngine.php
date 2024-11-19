@@ -7,6 +7,7 @@ namespace IfCastle\AmphpWebServer;
 use IfCastle\AmpPool\WorkerGroup as AmpWorkerGroup;
 use IfCastle\AmpPool\WorkerPool;
 use IfCastle\AmpPool\WorkerTypeEnum as WorkerPoolTypeEnum;
+use IfCastle\Application\Console\ConsoleLoggerInterface;
 use IfCastle\Application\Environment\SystemEnvironmentInterface;
 use IfCastle\Application\WorkerPool\WorkerGroup;
 use IfCastle\Application\WorkerPool\WorkerGroupInterface;
@@ -18,7 +19,6 @@ use IfCastle\Application\WorkerPool\WorkerTypeEnum;
 use IfCastle\DI\ConfigInterface;
 use IfCastle\DI\Dependency;
 use IfCastle\OsUtilities\Safe;
-use Psr\Log\LoggerInterface;
 
 class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolBuilderInterface, WorkerPoolInterface
 {
@@ -36,7 +36,7 @@ class WebServerEngine extends \IfCastle\Amphp\AmphpEngine implements WorkerPoolB
         ConfigInterface                         $configuration,
         #[Dependency]
         protected string                        $applicationDir,
-        protected readonly LoggerInterface|null $logger = null
+        protected readonly ConsoleLoggerInterface|null $logger = null
     ) {
         $this->applyConfiguration($configuration->findSection('server'));
     }
