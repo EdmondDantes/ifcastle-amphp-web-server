@@ -3074,16 +3074,16 @@
         },
         {
             "name": "ifcastle/rest-api",
-            "version": "v0.5.3",
+            "version": "v0.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/rest-api.git",
-                "reference": "9220521c042ba6f38818288b8d7b77671fd1c07c"
+                "reference": "784b6db7d1b94c06cf7f5e694ad2af6b203479cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/rest-api/zipball/9220521c042ba6f38818288b8d7b77671fd1c07c",
-                "reference": "9220521c042ba6f38818288b8d7b77671fd1c07c",
+                "url": "https://api.github.com/repos/EdmondDantes/rest-api/zipball/784b6db7d1b94c06cf7f5e694ad2af6b203479cc",
+                "reference": "784b6db7d1b94c06cf7f5e694ad2af6b203479cc",
                 "shasum": ""
             },
             "require": {
@@ -3127,9 +3127,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/rest-api/issues",
-                "source": "https://github.com/EdmondDantes/rest-api/tree/v0.5.3"
+                "source": "https://github.com/EdmondDantes/rest-api/tree/v0.5.4"
             },
-            "time": "2024-11-20T13:41:24+00:00"
+            "time": "2024-11-20T14:11:08+00:00"
         },
         {
             "name": "phpstan/phpstan",
