@@ -48,7 +48,7 @@ final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
 
         $host                       = $config['host'] ?? throw new FatalWorkerException('Config failed: Host is not defined');
         $port                       = $config['port'] ?? '9095';
-        $isDebugMode                = $systemEnvironment->isDeveloperMode() && ($config['debugMode'] ?? false);
+        $isDebugMode                = $config['debugMode'] ?? false;
 
         // Logger for the server engine
         $serverLogger               = new LoggerFilterByLevel(
