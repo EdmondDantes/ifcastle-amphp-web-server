@@ -8,6 +8,18 @@
         "ifcastle-installer": {
             "package": {
                 "name": "amphp-web-server",
+                "mainConfig": {
+                    "server": {
+                        "comment": "Web server engine.\nReactors - number of reactors.\nJobs - number of jobs.",
+                        "config": {
+                            "host": "localhost",
+                            "port": 9095,
+                            "reactors": 1,
+                            "jobs": 1,
+                            "debugMode": false
+                        }
+                    }
+                },
                 "bootloaders": [
                     "IfCastle\\Configurator\\Configurator"
                 ],

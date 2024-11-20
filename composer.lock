@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9755759266e90fd7ca6343a00a2b1196",
+    "content-hash": "6b02a8cacb6dbcc497cf9e7fc56fb7d8",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1354,16 +1354,16 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.7.18",
+            "version": "v0.7.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "982b34a25be2689e2324d9a92b82489a15d02c33"
+                "reference": "764c55c03cffa8c710772750ddda949838452a29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/982b34a25be2689e2324d9a92b82489a15d02c33",
-                "reference": "982b34a25be2689e2324d9a92b82489a15d02c33",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/764c55c03cffa8c710772750ddda949838452a29",
+                "reference": "764c55c03cffa8c710772750ddda949838452a29",
                 "shasum": ""
             },
             "require": {
@@ -1402,9 +1402,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.7.18"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.7.21"
             },
-            "time": "2024-11-19T09:13:30+00:00"
+            "time": "2024-11-20T08:56:03+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -3023,16 +3023,16 @@
         },
         {
             "name": "ifcastle/package-installer",
-            "version": "v0.2.0",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/ifcastle-package-installer.git",
-                "reference": "748ed9dec58c7c745a5f8a98f9d45dbf4f22bcf4"
+                "reference": "aa6e9c35e3d061bbb4e81240c16fa3f7929660e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-package-installer/zipball/748ed9dec58c7c745a5f8a98f9d45dbf4f22bcf4",
-                "reference": "748ed9dec58c7c745a5f8a98f9d45dbf4f22bcf4",
+                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-package-installer/zipball/aa6e9c35e3d061bbb4e81240c16fa3f7929660e9",
+                "reference": "aa6e9c35e3d061bbb4e81240c16fa3f7929660e9",
                 "shasum": ""
             },
             "require": {
@@ -3068,9 +3068,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/ifcastle-package-installer/issues",
-                "source": "https://github.com/EdmondDantes/ifcastle-package-installer/tree/v0.2.0"
+                "source": "https://github.com/EdmondDantes/ifcastle-package-installer/tree/v0.2.1"
             },
-            "time": "2024-11-03T10:28:05+00:00"
+            "time": "2024-11-20T07:58:57+00:00"
         },
         {
             "name": "ifcastle/rest-api",
