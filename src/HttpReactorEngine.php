@@ -11,6 +11,9 @@ use Amp\Http\Server\RequestHandler\ClosureRequestHandler;
 use Amp\Http\Server\Response;
 use Amp\Http\Server\SocketHttpServer;
 use Amp\Socket\BindContext;
+use IfCastle\Amphp\AmphpReadableStreamAdapter;
+use IfCastle\Amphp\ReadableStreamAdapter;
+use IfCastle\AmphpWebServer\Http\ResponseFactory;
 use IfCastle\AmpPool\Exceptions\FatalWorkerException;
 use IfCastle\AmpPool\Worker\WorkerInterface;
 use IfCastle\Application\Console\LoggerFilterByLevel;
@@ -18,8 +21,11 @@ use IfCastle\Application\Environment\PublicEnvironmentInterface;
 use IfCastle\Application\Environment\SystemEnvironmentInterface;
 use IfCastle\Application\RequestEnvironment\RequestEnvironment;
 use IfCastle\Application\RequestEnvironment\RequestPlanInterface;
+use IfCastle\Async\ReadableStreamInterface;
 use IfCastle\DI\ConfigInterface;
 use IfCastle\Exceptions\UnexpectedValueType;
+use IfCastle\Protocol\Http\HttpResponseInterface;
+use IfCastle\Protocol\ResponseFactoryInterface;
 use Psr\Log\LogLevel;
 
 final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
@@ -67,11 +73,14 @@ final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
         $environment                = $publicEnvironment ?? $systemEnvironment;
 
         $worker->getLogger()->info('HTTP server should be started on http://' . $host . ':' . $port);
-        
+
         // 3. Handle incoming connections and start the server
         $httpServer->start(
             new ClosureRequestHandler(static function (Request $request) use ($requestPlan, $environment): Response {
+
                 $requestEnv         = new RequestEnvironment($request, $environment);
+                // bind response factory
+                $requestEnv[ResponseFactoryInterface::class] = new ResponseFactory();
 
                 try {
                     $environment->setRequestEnvironment($requestEnv);
@@ -83,11 +92,11 @@ final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
                 $response           = $requestEnv->getResponse();
 
                 /* @phpstan-ignore-next-line */
-                if ($response instanceof Response) {
-                    return $response;
+                if ($response instanceof HttpResponseInterface) {
+                    return $this->buildResponse($response);
                 }
 
-                throw new UnexpectedValueType('response', $response, Response::class);
+                throw new UnexpectedValueType('response', $response, HttpResponseInterface::class);
             }),
             new DefaultErrorHandler(),
         );
@@ -97,5 +106,18 @@ final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
 
         // 5. Stop the HTTP server
         $httpServer->stop();
+    }
+
+    private function buildResponse(HttpResponseInterface $responseMutable): Response
+    {
+        $body                       = $responseMutable->getBody();
+
+        if ($body instanceof ReadableStreamAdapter) {
+            $body                   = $body->readableStream;
+        } elseif ($body instanceof ReadableStreamInterface) {
+            $body                   = new AmphpReadableStreamAdapter($body);
+        }
+
+        return new Response($responseMutable->getStatusCode(), $responseMutable->getHeaders(), $body);
     }
 }

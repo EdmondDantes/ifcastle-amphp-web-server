@@ -1220,16 +1220,16 @@
         },
         {
             "name": "ifcastle/amphp-engine",
-            "version": "v0.2.1",
+            "version": "v0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/ifcastle-amphp-engine.git",
-                "reference": "aca2b5a5ba7f4a98d6c17836f5908f87fdbf41d6"
+                "reference": "fea40cc77f7fc4da133db0c6cb367a0677b0ddc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-amphp-engine/zipball/aca2b5a5ba7f4a98d6c17836f5908f87fdbf41d6",
-                "reference": "aca2b5a5ba7f4a98d6c17836f5908f87fdbf41d6",
+                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-amphp-engine/zipball/fea40cc77f7fc4da133db0c6cb367a0677b0ddc3",
+                "reference": "fea40cc77f7fc4da133db0c6cb367a0677b0ddc3",
                 "shasum": ""
             },
             "require": {
@@ -1274,9 +1274,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/ifcastle-amphp-engine/issues",
-                "source": "https://github.com/EdmondDantes/ifcastle-amphp-engine/tree/v0.2.1"
+                "source": "https://github.com/EdmondDantes/ifcastle-amphp-engine/tree/v0.2.3"
             },
-            "time": "2024-11-03T16:35:14+00:00"
+            "time": "2024-11-20T13:13:15+00:00"
         },
         {
             "name": "ifcastle/amphp-pool",
