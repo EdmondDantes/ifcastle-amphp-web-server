@@ -16,6 +16,7 @@ use IfCastle\Amphp\ReadableStreamAdapter;
 use IfCastle\AmphpWebServer\Http\ResponseFactory;
 use IfCastle\AmpPool\Exceptions\FatalWorkerException;
 use IfCastle\AmpPool\Worker\WorkerInterface;
+use IfCastle\Application\Console\ConsoleLoggerInterface;
 use IfCastle\Application\Console\LoggerFilterByLevel;
 use IfCastle\Application\Environment\PublicEnvironmentInterface;
 use IfCastle\Application\Environment\SystemEnvironmentInterface;
@@ -51,6 +52,7 @@ final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
 
         $systemEnvironment          = $this->systemEnvironment;
         $config                     = $systemEnvironment->resolveDependency(ConfigInterface::class)->requireSection('server');
+        $systemEnvironment->set(ConsoleLoggerInterface::class, $worker->getLogger());
 
         $host                       = $config['host'] ?? throw new FatalWorkerException('Config failed: Host is not defined');
         $port                       = $config['port'] ?? '9095';
