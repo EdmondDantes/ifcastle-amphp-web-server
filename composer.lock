@@ -1220,16 +1220,16 @@
         },
         {
             "name": "ifcastle/amphp-engine",
-            "version": "v0.2.3",
+            "version": "v0.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/ifcastle-amphp-engine.git",
-                "reference": "fea40cc77f7fc4da133db0c6cb367a0677b0ddc3"
+                "reference": "21b79130e25e4dbffaf938a6400201fedc3c75cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-amphp-engine/zipball/fea40cc77f7fc4da133db0c6cb367a0677b0ddc3",
-                "reference": "fea40cc77f7fc4da133db0c6cb367a0677b0ddc3",
+                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-amphp-engine/zipball/21b79130e25e4dbffaf938a6400201fedc3c75cd",
+                "reference": "21b79130e25e4dbffaf938a6400201fedc3c75cd",
                 "shasum": ""
             },
             "require": {
@@ -1274,9 +1274,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/ifcastle-amphp-engine/issues",
-                "source": "https://github.com/EdmondDantes/ifcastle-amphp-engine/tree/v0.2.3"
+                "source": "https://github.com/EdmondDantes/ifcastle-amphp-engine/tree/v0.2.4"
             },
-            "time": "2024-11-20T13:13:15+00:00"
+            "time": "2024-11-20T13:23:32+00:00"
         },
         {
             "name": "ifcastle/amphp-pool",
@@ -1354,16 +1354,16 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.7.21",
+            "version": "v0.7.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "764c55c03cffa8c710772750ddda949838452a29"
+                "reference": "b05b4e6bf022742c3fc785daf7cb592c375c16b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/764c55c03cffa8c710772750ddda949838452a29",
-                "reference": "764c55c03cffa8c710772750ddda949838452a29",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/b05b4e6bf022742c3fc785daf7cb592c375c16b2",
+                "reference": "b05b4e6bf022742c3fc785daf7cb592c375c16b2",
                 "shasum": ""
             },
             "require": {
@@ -1402,9 +1402,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.7.21"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.7.22"
             },
-            "time": "2024-11-20T08:56:03+00:00"
+            "time": "2024-11-20T13:51:45+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -3074,16 +3074,16 @@
         },
         {
             "name": "ifcastle/rest-api",
-            "version": "v0.5.2",
+            "version": "v0.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/rest-api.git",
-                "reference": "0f802c3119662861b38f0b490c08c702561f597d"
+                "reference": "9220521c042ba6f38818288b8d7b77671fd1c07c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/rest-api/zipball/0f802c3119662861b38f0b490c08c702561f597d",
-                "reference": "0f802c3119662861b38f0b490c08c702561f597d",
+                "url": "https://api.github.com/repos/EdmondDantes/rest-api/zipball/9220521c042ba6f38818288b8d7b77671fd1c07c",
+                "reference": "9220521c042ba6f38818288b8d7b77671fd1c07c",
                 "shasum": ""
             },
             "require": {
@@ -3103,6 +3103,9 @@
                         "name": "rest_api",
                         "bootloaders": [
                             "IfCastle\\RestApi\\Bootloader"
+                        ],
+                        "tags": [
+                            "rest_api"
                         ]
                     }
                 }
@@ -3124,9 +3127,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/rest-api/issues",
-                "source": "https://github.com/EdmondDantes/rest-api/tree/v0.5.2"
+                "source": "https://github.com/EdmondDantes/rest-api/tree/v0.5.3"
             },
-            "time": "2024-11-06T12:27:43+00:00"
+            "time": "2024-11-20T13:41:24+00:00"
         },
         {
             "name": "phpstan/phpstan",

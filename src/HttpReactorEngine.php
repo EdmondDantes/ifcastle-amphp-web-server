@@ -80,20 +80,21 @@ final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
 
                 $requestEnv         = new RequestEnvironment($request, $environment);
                 // bind response factory
-                $requestEnv[ResponseFactoryInterface::class] = new ResponseFactory();
-
+                $requestEnv->set(ResponseFactoryInterface::class, new ResponseFactory());
+                
+                $response           = null;
+                
                 try {
                     $environment->setRequestEnvironment($requestEnv);
                     $requestPlan->executePlan($requestEnv);
+                    $response       = $requestEnv->getResponse();
                 } finally {
                     $requestEnv->dispose();
                 }
 
-                $response           = $requestEnv->getResponse();
-
                 /* @phpstan-ignore-next-line */
                 if ($response instanceof HttpResponseInterface) {
-                    return $this->buildResponse($response);
+                    return self::buildResponse($response);
                 }
 
                 throw new UnexpectedValueType('response', $response, HttpResponseInterface::class);
@@ -108,7 +109,7 @@ final class HttpReactorEngine extends \IfCastle\Amphp\AmphpEngine
         $httpServer->stop();
     }
 
-    private function buildResponse(HttpResponseInterface $responseMutable): Response
+    private static function buildResponse(HttpResponseInterface $responseMutable): Response
     {
         $body                       = $responseMutable->getBody();
 
