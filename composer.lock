@@ -1594,24 +1594,26 @@
         },
         {
             "name": "ifcastle/os-utilities",
-            "version": "v0.5.0",
+            "version": "v0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/os-utilities.git",
-                "reference": "468a576838b6b74dc3d6a2f7c48c5a1d38dd500f"
+                "reference": "b484df26ac8166bc33b7933a04a2bd3ecff55203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/os-utilities/zipball/468a576838b6b74dc3d6a2f7c48c5a1d38dd500f",
-                "reference": "468a576838b6b74dc3d6a2f7c48c5a1d38dd500f",
+                "url": "https://api.github.com/repos/EdmondDantes/os-utilities/zipball/b484df26ac8166bc33b7933a04a2bd3ecff55203",
+                "reference": "b484df26ac8166bc33b7933a04a2bd3ecff55203",
                 "shasum": ""
             },
             "require": {
-                "ifcastle/exceptions": "^5.0"
+                "ifcastle/exceptions": "^5.0",
+                "php": "^8.4"
             },
             "require-dev": {
                 "amphp/php-cs-fixer-config": "^2.1",
                 "friendsofphp/php-cs-fixer": "^3.60",
+                "ifcastle/codestyle": "^0.2.0",
                 "phpunit/phpunit": "^11.2"
             },
             "type": "library",
@@ -1631,9 +1633,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/os-utilities/issues",
-                "source": "https://github.com/EdmondDantes/os-utilities/tree/v0.5.0"
+                "source": "https://github.com/EdmondDantes/os-utilities/tree/v0.5.1"
             },
-            "time": "2024-07-30T12:32:03+00:00"
+            "time": "2024-11-24T08:02:47+00:00"
         },
         {
             "name": "ifcastle/protocol-contracts",
