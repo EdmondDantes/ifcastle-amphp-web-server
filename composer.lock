@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b02a8cacb6dbcc497cf9e7fc56fb7d8",
+    "content-hash": "9f2dc2e04b62db9b05c83ec20203a6ba",
     "packages": [
         {
             "name": "amphp/amp",
@@ -391,16 +391,16 @@
         },
         {
             "name": "amphp/http",
-            "version": "v2.1.1",
+            "version": "v2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/http.git",
-                "reference": "fe6b4dd50c1e70caf823092398074b5082e1d6da"
+                "reference": "3680d80bd38b5d6f3c2cef2214ca6dd6cef26588"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/http/zipball/fe6b4dd50c1e70caf823092398074b5082e1d6da",
-                "reference": "fe6b4dd50c1e70caf823092398074b5082e1d6da",
+                "url": "https://api.github.com/repos/amphp/http/zipball/3680d80bd38b5d6f3c2cef2214ca6dd6cef26588",
+                "reference": "3680d80bd38b5d6f3c2cef2214ca6dd6cef26588",
                 "shasum": ""
             },
             "require": {
@@ -414,7 +414,7 @@
                 "amphp/php-cs-fixer-config": "^2",
                 "league/uri": "^6.8 | ^7.1",
                 "phpunit/phpunit": "^9",
-                "psalm/phar": "^5.4"
+                "psalm/phar": "^5.26.1"
             },
             "type": "library",
             "autoload": {
@@ -443,7 +443,7 @@
             "description": "Basic HTTP primitives which can be shared by servers and clients.",
             "support": {
                 "issues": "https://github.com/amphp/http/issues",
-                "source": "https://github.com/amphp/http/tree/v2.1.1"
+                "source": "https://github.com/amphp/http/tree/v2.1.2"
             },
             "funding": [
                 {
@@ -451,7 +451,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-03T18:00:53+00:00"
+            "time": "2024-11-23T14:57:26+00:00"
         },
         {
             "name": "amphp/http-server",
@@ -1220,25 +1220,26 @@
         },
         {
             "name": "ifcastle/amphp-engine",
-            "version": "v0.2.4",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/ifcastle-amphp-engine.git",
-                "reference": "21b79130e25e4dbffaf938a6400201fedc3c75cd"
+                "reference": "f10b6300c27d329ed79327452a334d46db894130"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-amphp-engine/zipball/21b79130e25e4dbffaf938a6400201fedc3c75cd",
-                "reference": "21b79130e25e4dbffaf938a6400201fedc3c75cd",
+                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-amphp-engine/zipball/f10b6300c27d329ed79327452a334d46db894130",
+                "reference": "f10b6300c27d329ed79327452a334d46db894130",
                 "shasum": ""
             },
             "require": {
                 "amphp/amp": "^3.0",
                 "amphp/byte-stream": "^2.1",
                 "amphp/sync": "^2.3",
-                "ifcastle/application": "^0.7",
+                "ifcastle/application": "^0.8",
                 "ifcastle/async-contracts": "^0.5",
-                "ifcastle/design-patterns": "^v0.3"
+                "ifcastle/design-patterns": "^v0.4",
+                "php": "^8.4"
             },
             "require-dev": {
                 "ifcastle/codestyle": "^0.1",
@@ -1274,9 +1275,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/ifcastle-amphp-engine/issues",
-                "source": "https://github.com/EdmondDantes/ifcastle-amphp-engine/tree/v0.2.4"
+                "source": "https://github.com/EdmondDantes/ifcastle-amphp-engine/tree/v0.3.0"
             },
-            "time": "2024-11-20T13:23:32+00:00"
+            "time": "2024-11-24T07:52:18+00:00"
         },
         {
             "name": "ifcastle/amphp-pool",
@@ -1354,27 +1355,28 @@
         },
         {
             "name": "ifcastle/application",
-            "version": "v0.7.23",
+            "version": "v0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/application.git",
-                "reference": "08a7bdc533b09484d14b4c1459a1ea3b51a5c724"
+                "reference": "babdc3856fffc0798ae44699bb246a22edf84e76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/08a7bdc533b09484d14b4c1459a1ea3b51a5c724",
-                "reference": "08a7bdc533b09484d14b4c1459a1ea3b51a5c724",
+                "url": "https://api.github.com/repos/EdmondDantes/application/zipball/babdc3856fffc0798ae44699bb246a22edf84e76",
+                "reference": "babdc3856fffc0798ae44699bb246a22edf84e76",
                 "shasum": ""
             },
             "require": {
                 "ifcastle/async-contracts": "^0.5.0",
-                "ifcastle/design-patterns": "^0.3",
-                "ifcastle/di": "^0.7.1",
+                "ifcastle/design-patterns": "^0.4",
+                "ifcastle/di": "^0.8.0",
                 "ifcastle/exceptions": "^5.0",
                 "ifcastle/os-utilities": "^0.5.0",
-                "ifcastle/protocol-contracts": "^0.6",
-                "ifcastle/service-manager": "^0.6.5",
+                "ifcastle/protocol-contracts": "^0.7",
+                "ifcastle/service-manager": "^0.7.0",
                 "league/uri": "^7.4",
+                "php": "^8.4",
                 "psr/log": "^3.0"
             },
             "require-dev": {
@@ -1402,9 +1404,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/application/issues",
-                "source": "https://github.com/EdmondDantes/application/tree/v0.7.23"
+                "source": "https://github.com/EdmondDantes/application/tree/v0.8.0"
             },
-            "time": "2024-11-20T14:16:28+00:00"
+            "time": "2024-11-24T07:36:14+00:00"
         },
         {
             "name": "ifcastle/async-contracts",
@@ -1443,21 +1445,22 @@
         },
         {
             "name": "ifcastle/design-patterns",
-            "version": "v0.3.7",
+            "version": "0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/design-patterns.git",
-                "reference": "ac9991fed440473282f03190f4e2ec83f8f5669d"
+                "reference": "85e4dd31941c35ad111d1132b9d79cdb698a2098"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/ac9991fed440473282f03190f4e2ec83f8f5669d",
-                "reference": "ac9991fed440473282f03190f4e2ec83f8f5669d",
+                "url": "https://api.github.com/repos/EdmondDantes/design-patterns/zipball/85e4dd31941c35ad111d1132b9d79cdb698a2098",
+                "reference": "85e4dd31941c35ad111d1132b9d79cdb698a2098",
                 "shasum": ""
             },
             "require": {
-                "ifcastle/di": "^0.7",
-                "ifcastle/exceptions": "^5.1"
+                "ifcastle/di": "^0.8",
+                "ifcastle/exceptions": "^5.1",
+                "php": "^8.4"
             },
             "require-dev": {
                 "amphp/php-cs-fixer-config": "^2.1",
@@ -1484,29 +1487,29 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/design-patterns/issues",
-                "source": "https://github.com/EdmondDantes/design-patterns/tree/v0.3.7"
+                "source": "https://github.com/EdmondDantes/design-patterns/tree/0.4.1"
             },
-            "time": "2024-11-13T16:20:06+00:00"
+            "time": "2024-11-24T07:16:29+00:00"
         },
         {
             "name": "ifcastle/di",
-            "version": "v0.7.5",
+            "version": "v0.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/di.git",
-                "reference": "b08509840e06e0c5441b950293881c6d5ca29f50"
+                "reference": "9ac8c50ccc2cb9e0a7cb387f222e6a92b3560fa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/di/zipball/b08509840e06e0c5441b950293881c6d5ca29f50",
-                "reference": "b08509840e06e0c5441b950293881c6d5ca29f50",
+                "url": "https://api.github.com/repos/EdmondDantes/di/zipball/9ac8c50ccc2cb9e0a7cb387f222e6a92b3560fa4",
+                "reference": "9ac8c50ccc2cb9e0a7cb387f222e6a92b3560fa4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.3"
+                "php": ">=8.4"
             },
             "require-dev": {
-                "ifcastle/codestyle": "^0.1.2",
+                "ifcastle/codestyle": "^0.2.0",
                 "phpstan/phpstan": "^1.12",
                 "phpunit/phpunit": "^11.2",
                 "rector/rector": "^1.2"
@@ -1538,9 +1541,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/di/issues",
-                "source": "https://github.com/EdmondDantes/di/tree/v0.7.5"
+                "source": "https://github.com/EdmondDantes/di/tree/v0.8.2"
             },
-            "time": "2024-11-06T10:07:34+00:00"
+            "time": "2024-11-24T07:31:21+00:00"
         },
         {
             "name": "ifcastle/exceptions",
@@ -1634,24 +1637,25 @@
         },
         {
             "name": "ifcastle/protocol-contracts",
-            "version": "v0.6.3",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/protocol-contracts.git",
-                "reference": "eebb12fb59b62882b8d6ac13480c733f4e1cab86"
+                "reference": "3602706b4f49db5af3a8d85d12ca34fab897022c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/protocol-contracts/zipball/eebb12fb59b62882b8d6ac13480c733f4e1cab86",
-                "reference": "eebb12fb59b62882b8d6ac13480c733f4e1cab86",
+                "url": "https://api.github.com/repos/EdmondDantes/protocol-contracts/zipball/3602706b4f49db5af3a8d85d12ca34fab897022c",
+                "reference": "3602706b4f49db5af3a8d85d12ca34fab897022c",
                 "shasum": ""
             },
             "require": {
                 "ifcastle/async-contracts": "^0.5",
-                "ifcastle/design-patterns": "^0.3",
-                "ifcastle/di": "^0.7",
+                "ifcastle/design-patterns": "^0.4",
+                "ifcastle/di": "^0.8",
                 "ifcastle/exceptions": "^5.0",
                 "league/uri-interfaces": "^7.4",
+                "php": "^8.4",
                 "psr/http-message": "^2.0"
             },
             "require-dev": {
@@ -1675,29 +1679,30 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/protocol-contracts/issues",
-                "source": "https://github.com/EdmondDantes/protocol-contracts/tree/v0.6.3"
+                "source": "https://github.com/EdmondDantes/protocol-contracts/tree/v0.7.0"
             },
-            "time": "2024-11-17T10:22:48+00:00"
+            "time": "2024-11-24T07:22:03+00:00"
         },
         {
             "name": "ifcastle/service-manager",
-            "version": "v0.6.10",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/service-manager.git",
-                "reference": "4f56c6c110f1c5665468bcb1d62a9ab2bc56596d"
+                "reference": "9c66af8be5faf6be1d849a25854eade83a314dc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/service-manager/zipball/4f56c6c110f1c5665468bcb1d62a9ab2bc56596d",
-                "reference": "4f56c6c110f1c5665468bcb1d62a9ab2bc56596d",
+                "url": "https://api.github.com/repos/EdmondDantes/service-manager/zipball/9c66af8be5faf6be1d849a25854eade83a314dc8",
+                "reference": "9c66af8be5faf6be1d849a25854eade83a314dc8",
                 "shasum": ""
             },
             "require": {
-                "ifcastle/design-patterns": "^0.3.0",
-                "ifcastle/di": "^0.7.1",
+                "ifcastle/design-patterns": "^0.4.0",
+                "ifcastle/di": "^0.8.0",
                 "ifcastle/exceptions": "^5.0",
-                "ifcastle/type-definitions": "^0.5.0"
+                "ifcastle/type-definitions": "^0.5.0",
+                "php": "^8.4"
             },
             "require-dev": {
                 "amphp/php-cs-fixer-config": "^2.1",
@@ -1722,9 +1727,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/service-manager/issues",
-                "source": "https://github.com/EdmondDantes/service-manager/tree/v0.6.10"
+                "source": "https://github.com/EdmondDantes/service-manager/tree/v0.7.0"
             },
-            "time": "2024-11-08T12:30:20+00:00"
+            "time": "2024-11-24T07:12:38+00:00"
         },
         {
             "name": "ifcastle/type-definitions",
@@ -2925,16 +2930,16 @@
         },
         {
             "name": "ifcastle/codestyle",
-            "version": "v0.1.12",
+            "version": "v0.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/ifcastle-codestyle.git",
-                "reference": "166555395c7a1e7fd802b828b0deaf1d022ba7eb"
+                "reference": "4798dc43d5a6d2f07446b05fde98cd4e770cb305"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-codestyle/zipball/166555395c7a1e7fd802b828b0deaf1d022ba7eb",
-                "reference": "166555395c7a1e7fd802b828b0deaf1d022ba7eb",
+                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-codestyle/zipball/4798dc43d5a6d2f07446b05fde98cd4e770cb305",
+                "reference": "4798dc43d5a6d2f07446b05fde98cd4e770cb305",
                 "shasum": ""
             },
             "require": {
@@ -2960,29 +2965,29 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/ifcastle-codestyle/issues",
-                "source": "https://github.com/EdmondDantes/ifcastle-codestyle/tree/v0.1.12"
+                "source": "https://github.com/EdmondDantes/ifcastle-codestyle/tree/v0.1.16"
             },
-            "time": "2024-11-17T13:28:49+00:00"
+            "time": "2024-11-21T08:40:32+00:00"
         },
         {
             "name": "ifcastle/configurator-ini",
-            "version": "v0.6.0",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/configurator-ini.git",
-                "reference": "e97ed38574465eb0d5e673b61dc6709de5d518c4"
+                "reference": "209c8a25ee61ce8805769b43c90cd5412eed6e75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/configurator-ini/zipball/e97ed38574465eb0d5e673b61dc6709de5d518c4",
-                "reference": "e97ed38574465eb0d5e673b61dc6709de5d518c4",
+                "url": "https://api.github.com/repos/EdmondDantes/configurator-ini/zipball/209c8a25ee61ce8805769b43c90cd5412eed6e75",
+                "reference": "209c8a25ee61ce8805769b43c90cd5412eed6e75",
                 "shasum": ""
             },
             "require": {
-                "ifcastle/application": "^0.7",
-                "ifcastle/di": "^0.7",
+                "ifcastle/application": "^0.8",
+                "ifcastle/di": "^0.8",
                 "ifcastle/os-utilities": "^0.5",
-                "ifcastle/service-manager": "^0.6"
+                "ifcastle/service-manager": "^0.7"
             },
             "require-dev": {
                 "ifcastle/codestyle": "^0.1.7",
@@ -3017,27 +3022,27 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/configurator-ini/issues",
-                "source": "https://github.com/EdmondDantes/configurator-ini/tree/v0.6.0"
+                "source": "https://github.com/EdmondDantes/configurator-ini/tree/v0.7.0"
             },
-            "time": "2024-11-03T08:49:57+00:00"
+            "time": "2024-11-24T07:43:11+00:00"
         },
         {
             "name": "ifcastle/package-installer",
-            "version": "v0.2.1",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/ifcastle-package-installer.git",
-                "reference": "aa6e9c35e3d061bbb4e81240c16fa3f7929660e9"
+                "reference": "e88a3e3cb2fcacd0f0f83acfa1965aed0789e08e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-package-installer/zipball/aa6e9c35e3d061bbb4e81240c16fa3f7929660e9",
-                "reference": "aa6e9c35e3d061bbb4e81240c16fa3f7929660e9",
+                "url": "https://api.github.com/repos/EdmondDantes/ifcastle-package-installer/zipball/e88a3e3cb2fcacd0f0f83acfa1965aed0789e08e",
+                "reference": "e88a3e3cb2fcacd0f0f83acfa1965aed0789e08e",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.0",
-                "ifcastle/application": "^0.7"
+                "ifcastle/application": "^0.8"
             },
             "require-dev": {
                 "composer/composer": "^2.0",
@@ -3068,27 +3073,28 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/ifcastle-package-installer/issues",
-                "source": "https://github.com/EdmondDantes/ifcastle-package-installer/tree/v0.2.1"
+                "source": "https://github.com/EdmondDantes/ifcastle-package-installer/tree/v0.3.0"
             },
-            "time": "2024-11-20T07:58:57+00:00"
+            "time": "2024-11-24T07:40:21+00:00"
         },
         {
             "name": "ifcastle/rest-api",
-            "version": "v0.5.4",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdmondDantes/rest-api.git",
-                "reference": "784b6db7d1b94c06cf7f5e694ad2af6b203479cc"
+                "reference": "cf448a662a83d5538814b64ed8a17487e0875ec4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdmondDantes/rest-api/zipball/784b6db7d1b94c06cf7f5e694ad2af6b203479cc",
-                "reference": "784b6db7d1b94c06cf7f5e694ad2af6b203479cc",
+                "url": "https://api.github.com/repos/EdmondDantes/rest-api/zipball/cf448a662a83d5538814b64ed8a17487e0875ec4",
+                "reference": "cf448a662a83d5538814b64ed8a17487e0875ec4",
                 "shasum": ""
             },
             "require": {
-                "ifcastle/application": "^0.7",
-                "ifcastle/protocol-contracts": "^0.6",
+                "ifcastle/application": "^0.8",
+                "ifcastle/protocol-contracts": "^0.7",
+                "php": "^8.4",
                 "symfony/routing": "^7.1"
             },
             "require-dev": {
@@ -3127,9 +3133,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EdmondDantes/rest-api/issues",
-                "source": "https://github.com/EdmondDantes/rest-api/tree/v0.5.4"
+                "source": "https://github.com/EdmondDantes/rest-api/tree/v0.6.0"
             },
-            "time": "2024-11-20T14:11:08+00:00"
+            "time": "2024-11-24T07:49:39+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -5312,10 +5318,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform": {
+        "php": "^8.4"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

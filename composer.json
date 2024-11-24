@@ -38,18 +38,19 @@
         }
     },
     "require": {
-        "ifcastle/application": "^0.7",
-        "ifcastle/service-manager": "^0.6",
-        "ifcastle/amphp-engine": "^0.2",
+        "php": "^8.4",
+        "ifcastle/application": "^0.8",
+        "ifcastle/service-manager": "^0.7",
+        "ifcastle/amphp-engine": "^0.3",
         "ifcastle/amphp-pool": "^1.0",
-        "ifcastle/protocol-contracts": "^0.6"
+        "ifcastle/protocol-contracts": "^0.7"
     },
     "require-dev": {
         "ifcastle/codestyle": "^0.1.1",
         "phpstan/phpstan": "^1.12",
-        "ifcastle/package-installer": "^0.2.0",
-        "ifcastle/configurator-ini": "^0.6.0",
-        "ifcastle/rest-api": "^0.5.2"
+        "ifcastle/package-installer": "^0.3.0",
+        "ifcastle/configurator-ini": "^0.7.0",
+        "ifcastle/rest-api": "^0.6.0"
     },
     "bin": [
         "amphp"
